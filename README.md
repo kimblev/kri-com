@@ -7,9 +7,9 @@
 - [x] configure default.config.yml
 - [x] vagrant up
 - [x] Set up git
--- set up git repo
--- git init
--- create .gitignore file
+: set up git repo
+: git init
+: create .gitignore file
 -- git add README.md
 -- git commit -m "first commit"
 -- git branch -M main
