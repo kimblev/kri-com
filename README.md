@@ -3,12 +3,12 @@
 ## RECONSTRUCTING KYI-COM
 
 ### Site install
-[^1]: git clone git@github.com:geerlingguy/drupal-vm.git
-[^2]: configure default.config.yml
-[^3]: vagrant up
-[^4]: Set up git
-[^4][^1]:  set up git repo
--- git init
+- [x] git clone git@github.com:geerlingguy/drupal-vm.git
+- [x] configure default.config.yml
+- [x] vagrant up
+- [x] Set up git
+- [x]  set up git repo
+-- [x] git init
 -- create .gitignore file
 -- git add README.md
 -- git commit -m "first commit"
