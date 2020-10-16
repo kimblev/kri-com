@@ -1,10 +1,11 @@
 # Code base for kri-com
 
 ## RECONSTRUCTING KYI-COM
+
+### Site install
 - git clone git@github.com:geerlingguy/drupal-vm.git
 - configure default.config.yml
 - vagrant up
-
 - Set up git
 -- set up git repo
 -- git init
@@ -15,9 +16,21 @@
 -- git remote add origin git@github.com:kimblev/kri-com.git
 -- git push -u origin main
 - run "drush site:install minimal --db-url=mysql://kyreal_kyreald8:5346Hazel@localhost/kyreal_kyreald8"
+- Edit D1 from assigned credentials to user from current site
+- Edit settings.php
+-- Set proper config_sync_directory: $settings['config_sync_directory'] = '../config/sync';
+-- Add migrate db to $databases array: $databases['migrate']['default'] 
+- Export and store configuration at this point
 
+### Contrib module installation
 
-composer create-project drupal/recommended-project --prefer-dist --stability dev --no-interaction
 
 ## Random commands
-- run "COMPOSER_MEMORY_LIMIT=-1 composer require "
+- "COMPOSER_MEMORY_LIMIT=-1 composer require "
+- drush site:install minimal --db-url=mysql://user:pass@host/db --site-name=""
+
+
+
+
+
+
