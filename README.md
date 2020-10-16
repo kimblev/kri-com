@@ -7,7 +7,7 @@
 - [x] configure default.config.yml
 - [x] vagrant up
 - [x] Set up git
-    - [x] set up git repo
+    - set up git repo
     - git init
     - create .gitignore file
     - git add README.md
@@ -21,8 +21,17 @@
 -- Set proper config_sync_directory: $settings['config_sync_directory'] = '../config/sync';
 -- Add migrate db to $databases array: $databases['migrate']['default'] 
 - [x] Export and store configuration at this point
+- [x] Set up D7 site database
+    : My ISP seems to block connection to a DB on the internet so I set up a copy on localhost using port 3307
+    - Download DB from live lite with Backup Migrate
+    - upload to D& copy at kyi7.vardaman.com
+    - Remove extra product reference from Product Displays
+    - Download that DB and upload to DB in localhost
 
 ### Contrib module installation
+- [] Install necessary modules per module audit
+- [] Sync activated modules with D7 site
+- [] Export and store configuration
 
 
 ## Random commands
