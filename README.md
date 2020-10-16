@@ -30,7 +30,7 @@
 
 ### Contrib module installation
 - [x] Download necessary modules per module audit via composer require
-- [] Sync activated/installed modules with D7 site
+- [x] Sync activated/installed modules with D7 site
 - [] Export and store configuration
 
 
