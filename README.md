@@ -33,6 +33,23 @@
 - [x] Sync activated/installed modules with D7 site
 - [x] Export and store configuration
 
+## Migration
+    First configuration, then content.
+
+### Configuration migration
+- [x] Start new git branch
+- [x] Add *ini_set('memory_limit', '-1');* to seetings.php to prevent memory errors
+- [x] Run *migrate-status* to see what's there and what isn't
+- [x] Run *migrate-upgrade* to build migrate_drupal_7 migration group
+- [x] Export and store migrate_drupal_7 migration group
+- [] Run drush mfs on product related migrations to review source fields we are dealing with
+
+#### Product configuration migration
+- [] Review each prodcut type and the differences in their fields
+- [] Determine how to handle the checkbox fields
+- [] Determine where the 3 items come from in *upgrade_commerce1_product_attribute* migration
+
+
 
 ## Random commands
 - COMPOSER_MEMORY_LIMIT=-1 composer require
@@ -40,8 +57,15 @@
 - 
 - drush migrate-upgrade --legacy-db-url=mysql://kvardaman:pass@12.34.56.78/d6db --legacy-root=http://myd6site.com
 
+- drush migrate-upgrade --legacy-db-key=migrate --legacy-root=kyi7.vardaman.com --configure-only
 
-
+Package
+Video Course
+NAR Ethics
+National Speaker
+New Course
+Show add to cart button (instead of registration)
+ Available as CE Course
 
 
 
