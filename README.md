@@ -7,14 +7,14 @@
 - [x] configure default.config.yml
 - [x] vagrant up
 - [x] Set up git
-: set up git repo
-: git init
-: create .gitignore file
--- git add README.md
--- git commit -m "first commit"
--- git branch -M main
--- git remote add origin git@github.com:kimblev/kri-com.git
--- git push -u origin main
+- set up git repo
+- git init
+- create .gitignore file
+- git add README.md
+- git commit -m "first commit"
+- git branch -M main
+- git remote add origin git@github.com:kimblev/kri-com.git
+- git push -u origin main
 - [x] run "drush site:install minimal --db-url=mysql://kyreal_kyreald8:5346Hazel@localhost/kyreal_kyreald8"
 - [x] Edit D1 from assigned credentials to user from current site
 - [x] Edit settings.php
