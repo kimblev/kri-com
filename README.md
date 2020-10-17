@@ -15,8 +15,7 @@
     - git branch -M main
     - git remote add origin git@github.com:kimblev/kri-com.git
     - git push -u origin main
-- [x] run "drush site:install standard --db-url=mysql://kyreal_kyreald8:5346Hazel@localhost/kyreal_kyreald8" **Important: minimal install profile turned out badly: no admin user, no text formats**
-- [x] Edit D1 from assigned credentials to user from current site
+- [x] run "drush site:install standard --account-name="" --account-pass="" --db-url=mysql://kyreal_kyreald8:5346Hazel@localhost/kyreal_kyreald8" **Important: minimal install profile turned out badly: no admin user, no text formats**
 - [x] Edit settings.php
     - Set proper config_sync_directory: $settings['config_sync_directory'] = '../config/sync';
     - Add migrate db to $databases array: $databases['migrate']['default'] 
@@ -32,7 +31,7 @@
 - [x] Download necessary modules per module audit via composer require
 - [x] Sync activated/installed modules with D7 site
 - [x] Export and store configuration
-- [] I had to reinstall site because I had problems with minimal install profile.
+- [] I had to reinstall site because I had problems with minimal install profile. *drush site:install standard --account-name="" --account-pass=""*
 
 ## Migration
     First configuration, then content.
