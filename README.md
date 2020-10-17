@@ -15,7 +15,7 @@
     - git branch -M main
     - git remote add origin git@github.com:kimblev/kri-com.git
     - git push -u origin main
-- [x] run "drush site:install minimal --db-url=mysql://kyreal_kyreald8:5346Hazel@localhost/kyreal_kyreald8"
+- [x] run "drush site:install standard --db-url=mysql://kyreal_kyreald8:5346Hazel@localhost/kyreal_kyreald8" **Important: minimal install profile turned out badly: no admin user, no text formats**
 - [x] Edit D1 from assigned credentials to user from current site
 - [x] Edit settings.php
     - Set proper config_sync_directory: $settings['config_sync_directory'] = '../config/sync';
@@ -32,6 +32,28 @@
 - [x] Download necessary modules per module audit via composer require
 - [x] Sync activated/installed modules with D7 site
 - [x] Export and store configuration
+- [] I had to reinstall site because I had problems with minimal install profile.
+
+## Migration
+    First configuration, then content.
+
+### Configuration migration
+- [x] Start new git branch
+- [x] Add *ini_set('memory_limit', '-1');* to seetings.php to prevent memory errors
+- [x] Run *migrate-status* to see what's there and what isn't
+- [x] Run *migrate-upgrade* to build migrate_drupal_7 migration group
+- [x] Export and store migrate_drupal_7 migration group
+- [] Run drush mfs on product related migrations to review source fields we are dealing with
+
+#### Product configuration migration
+- [] Review each product type and the differences in their fields
+- [] Determine how to handle the checkbox fields
+- [] Determine where the 3 items come from in *upgrade_commerce1_product_attribute* migration
+
+##### Trial run
+-  Beginning by creating product type broker_education (this creates a product variation type of the same name but the reverse is not true
+- I will then add to the variation type to add my fields...that just seems to be where they should be looking at the migation config files. migrate_plus.migration.upgrade_commerce1_product_type has "injectVariationFields" where upgrade_commerce1_product_variation_broker_education actually has all the custom fields)
+
 
 
 ## Random commands
@@ -40,8 +62,15 @@
 - 
 - drush migrate-upgrade --legacy-db-url=mysql://kvardaman:pass@12.34.56.78/d6db --legacy-root=http://myd6site.com
 
+- drush migrate-upgrade --legacy-db-key=migrate --legacy-root=kyi7.vardaman.com --configure-only
 
-
+Package
+Video Course
+NAR Ethics
+National Speaker
+New Course
+Show add to cart button (instead of registration)
+ Available as CE Course
 
 
 
