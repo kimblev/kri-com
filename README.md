@@ -15,7 +15,7 @@
     - git branch -M main
     - git remote add origin git@github.com:kimblev/kri-com.git
     - git push -u origin main
-- [x] run "drush site:install minimal --db-url=mysql://kyreal_kyreald8:5346Hazel@localhost/kyreal_kyreald8"
+- [x] run "drush site:install standard --db-url=mysql://kyreal_kyreald8:5346Hazel@localhost/kyreal_kyreald8" **Important: minimal install profile turned out badly: no admin user, no text formats**
 - [x] Edit D1 from assigned credentials to user from current site
 - [x] Edit settings.php
     - Set proper config_sync_directory: $settings['config_sync_directory'] = '../config/sync';
@@ -45,9 +45,13 @@
 - [] Run drush mfs on product related migrations to review source fields we are dealing with
 
 #### Product configuration migration
-- [] Review each prodcut type and the differences in their fields
+- [] Review each product type and the differences in their fields
 - [] Determine how to handle the checkbox fields
 - [] Determine where the 3 items come from in *upgrade_commerce1_product_attribute* migration
+
+##### Trial run
+-  Beginning by creating product type broker_education (this creates a product variation type of the same name but the reverse is not true
+- I will then add to the variation type to add my fields...that just seems to be where they should be looking at the migation config files. migrate_plus.migration.upgrade_commerce1_product_type has "injectVariationFields" where upgrade_commerce1_product_variation_broker_education actually has all the custom fields)
 
 
 
