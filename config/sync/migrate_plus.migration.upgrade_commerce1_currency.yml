@@ -1,0 +1,37 @@
+uuid: c239aff4-2e56-4b6b-978f-89c9a805eb45
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_commerce1_currency
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Commerce
+  - Configuration
+migration_group: migrate_drupal_7
+label: 'Commerce currency'
+source:
+  plugin: commerce1_currency
+  variables:
+    - commerce_default_currency
+process:
+  currencyCode:
+    -
+      plugin: get
+      source: commerce_default_currency
+  name:
+    -
+      plugin: get
+      source: currency_name
+  numericCode:
+    -
+      plugin: get
+      source: numeric_code
+destination:
+  plugin: 'entity:commerce_currency'
+  destination_module: commerce_price
+migration_dependencies:
+  required: {  }
+  optional: {  }
