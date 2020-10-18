@@ -2,7 +2,11 @@
 
 ## RECONSTRUCTING KYI-COM
 
-### Site install
+### D7 Preparation
+- [x] Install upgrade_status module which will add a tab under Reports > Available updates which will report upgrade status of modules installed
+- [] Update all modules necessary paying particular attention modules highlighted in yellow which require a special dev version.
+
+### New D8 Site install
 - [x] git clone git@github.com:geerlingguy/drupal-vm.git
 - [x] configure default.config.yml
 - [x] vagrant up
@@ -42,34 +46,36 @@
 - [x] Run *migrate-status* to see what's there and what isn't
 - [x] Run *migrate-upgrade* to build migrate_drupal_7 migration group
 - [x] Export and store migrate_drupal_7 migration group
-- [] Run drush mfs on product related migrations to review source fields we are dealing with
+- [x] Run drush mfs on product related migrations to review source fields we are dealing with
 
 #### Product configuration migration
-- [] Review each product type and the differences in their fields
+- [x] Review each product type and the differences in their fields
 - [] Determine how to handle the checkbox fields
 - [] Determine where the 3 items come from in *upgrade_commerce1_product_attribute* migration
 
 ##### Trial run
 -  Beginning by creating product type broker_education (this creates a product variation type of the same name but the reverse is not true
-- I will then add to the variation type to add my fields...that just seems to be where they should be looking at the migation config files. migrate_plus.migration.upgrade_commerce1_product_type has "injectVariationFields" where upgrade_commerce1_product_variation_broker_education actually has all the custom fields)
-
+- I will then switch to the created variation type to add my fields...that just seems to be where they should be looking at the migation config files. migrate_plus.migration.upgrade_commerce1_product_type has "injectVariationFields" where upgrade_commerce1_product_variation_broker_education actually has all the custom fields)
+- **Is product status replaced by 'published'?**
 
 
 ## Random commands
 - COMPOSER_MEMORY_LIMIT=-1 composer require
 - drush site:install minimal --db-url=mysql://user:pass@host/db --site-name=""
+drush site:install standard --account-name="" --account-pass="" --existing-config
 - 
 - drush migrate-upgrade --legacy-db-url=mysql://kvardaman:pass@12.34.56.78/d6db --legacy-root=http://myd6site.com
 
 - drush migrate-upgrade --legacy-db-key=migrate --legacy-root=kyi7.vardaman.com --configure-only
+- drush migrate-import --all
+- git commit --amend --author="Kimble <kimble@vardaman.com>"
 
-Package
-Video Course
-NAR Ethics
-National Speaker
-New Course
-Show add to cart button (instead of registration)
- Available as CE Course
+## New resource
+
+https://www.lullabot.com/articles/overview-migrating-drupal-sites-8
+- drush migrate:import --tag=Configuration --execute-dependencies
+- drush migrate:import --tag=Content --execute-dependencies
+- drush migrate:status | grep article
 
 
 
