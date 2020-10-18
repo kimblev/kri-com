@@ -47,6 +47,7 @@
 - [x] Run *migrate-upgrade* to build migrate_drupal_7 migration group
 - [x] Export and store migrate_drupal_7 migration group
 - [x] Run drush mfs on product related migrations to review source fields we are dealing with
+- [x] Remove commerce_shipping frmo required module list. That was an error.
 
 #### Product configuration migration
 - [x] Review each product type and the differences in their fields
