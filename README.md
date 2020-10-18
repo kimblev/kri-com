@@ -4,7 +4,7 @@
 
 ### D7 Preparation
 - [x] Install upgrade_status module which will add a tab under Reports > Available updates which will report upgrade status of modules installed
-- [] Update all modules necessary paying particular attention modules highlighted in yellow which require a special dev version.
+- [x] Update all modules necessary paying particular attention modules highlighted in yellow which require a special dev version.
 
 ### New D8 Site install
 - [x] git clone git@github.com:geerlingguy/drupal-vm.git
