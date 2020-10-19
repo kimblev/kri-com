@@ -101,7 +101,6 @@ module:
   schema_web_site: 0
   search: 0
   shortcut: 0
-  starrating: 0
   state_machine: 0
   swiftmailer: 0
   system: 0

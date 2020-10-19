@@ -1,4 +1,4 @@
-uuid: a58de3d3-08c7-44fd-b973-63fd6ed76cd8
+uuid: e9cb18d1-98ec-4cd8-b741-cd952b7bffc2
 langcode: en
 status: true
 dependencies: {  }
@@ -68,10 +68,6 @@ process:
     -
       plugin: commerce1_migrate_commerce_price
       source: commerce_price
-  field_registration:
-    -
-      plugin: get
-      source: field_registration
   field_pre_licensing_disclaimer:
     -
       plugin: get

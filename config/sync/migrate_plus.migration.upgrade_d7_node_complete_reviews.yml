@@ -1,4 +1,4 @@
-uuid: 5afc52b4-d23a-4a0a-9f73-50c2c13e27e5
+uuid: d0d81dbb-e58e-4ab6-89cc-ce8ee43e5df9
 langcode: en
 status: true
 dependencies: {  }
@@ -80,10 +80,6 @@ process:
     -
       plugin: get
       source: body
-  field_star_rating:
-    -
-      plugin: get
-      source: field_star_rating
   field_date_review:
     -
       plugin: sub_process
