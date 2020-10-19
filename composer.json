@@ -88,12 +88,6 @@
                 "web-root": "web/"
             }
         },
-        "patches": {
-            "drupal/commerce_migrate_commerce": {
-                "Invalid dependencies when using Migrate Upgrade": "https://www.drupal.org/files/issues/2019-04-17/recaptcha-ajax-2493183-172.patch"
-            }
-        },
-        "enable-patching": true,
         "installer-paths": {
             "web/core": ["type:drupal-core"],
             "web/libraries/{$name}": ["type:drupal-library"],
