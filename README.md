@@ -35,7 +35,7 @@
 - [x] Download necessary modules per module audit via composer require
 - [x] Sync activated/installed modules with D7 site
 - [x] Export and store configuration
-- [] I had to reinstall site because I had problems with minimal install profile. *drush site:install standard --account-name="" --account-pass=""*
+- [x] I had to reinstall site because I had problems with minimal install profile. *drush site:install standard --account-name="" --account-pass=""*
 
 ## Migration
     First configuration, then content.
@@ -47,7 +47,8 @@
 - [x] Run *migrate-upgrade* to build migrate_drupal_7 migration group
 - [x] Export and store migrate_drupal_7 migration group
 - [x] Run drush mfs on product related migrations to review source fields we are dealing with
-- [x] Remove commerce_shipping frmo required module list. That was an error.
+- [x] For now commerce_shipping is required due to a bug in commerce_migrate_commerce
+- [x] Disable core actions module. There are no compatible actions in D7 site.
 
 #### Product configuration migration
 - [x] Review each product type and the differences in their fields
@@ -62,21 +63,30 @@
 
 ## Random commands
 - COMPOSER_MEMORY_LIMIT=-1 composer require
+- COMPOSER_PROCESS_TIMEOUT=2000
 - drush site:install minimal --db-url=mysql://user:pass@host/db --site-name=""
-drush site:install standard --account-name="" --account-pass="" --existing-config
+- drush site:install standard --account-name="" --account-pass="" --existing-config
 - 
 - drush migrate-upgrade --legacy-db-url=mysql://kvardaman:pass@12.34.56.78/d6db --legacy-root=http://myd6site.com
 
 - drush migrate-upgrade --legacy-db-key=migrate --legacy-root=kyi7.vardaman.com --configure-only
 - drush migrate-import --all
+- drush ms --group="migrate_drupal_7"
 - git commit --amend --author="Kimble <kimble@vardaman.com>"
 
 ## New resource
 
 https://www.lullabot.com/articles/overview-migrating-drupal-sites-8
-- drush migrate:import --tag=Configuration --execute-dependencies
+- drush migrate:import --group=migrate_drupal_7 --tag=Configuration --execute-dependencies
 - drush migrate:import --tag=Content --execute-dependencies
 - drush migrate:status | grep article
+
+        "patches": {
+            "drupal/commerce_migrate_commerce": {
+                "Invalid dependencies when using Migrate Upgrade": "https://www.drupal.org/files/issues/2019-04-17/recaptcha-ajax-2493183-172.patch"
+            }
+        },
+        "enable-patching": true,
 
 
 
