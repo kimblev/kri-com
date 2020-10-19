@@ -54,6 +54,7 @@
 - [x] Review each product type and the differences in their fields
 - [] Determine how to handle the checkbox fields
 - [] Determine where the 3 items come from in *upgrade_commerce1_product_attribute* migration
+- [x] Install this patch: https://www.drupal.org/files/issues/2020-09-12/commerce_migrate-n3157708-27.patch, which gets rid of commerce1 dependencies. I tried unsuccessfully to add the patch in composer, ended up adding it manually.
 
 ##### Trial run
 -  Beginning by creating product type broker_education (this creates a product variation type of the same name but the reverse is not true
@@ -63,7 +64,7 @@
 
 ## Random commands
 - COMPOSER_MEMORY_LIMIT=-1 composer require
-- COMPOSER_PROCESS_TIMEOUT=2000
+- COMPOSER_PROCESS_TIMEOUT=2000 composer update
 - drush site:install minimal --db-url=mysql://user:pass@host/db --site-name=""
 - drush site:install standard --account-name="" --account-pass="" --existing-config
 - 
@@ -73,6 +74,8 @@
 - drush migrate-import --all
 - drush ms --group="migrate_drupal_7"
 - git commit --amend --author="Kimble <kimble@vardaman.com>"
+- git commit --amend --reset-author
+- patch -b < c_m_c.patch
 
 ## New resource
 
