@@ -5,6 +5,9 @@
 ### D7 Preparation
 - [x] Install upgrade_status module which will add a tab under Reports > Available updates which will report upgrade status of modules installed
 - [x] Update all modules necessary paying particular attention modules highlighted in yellow which require a special dev version.
+- [x]Sync text formats on fields that use different text type on different content types. D8 will not accept fileds that have multiple text formats assigned to them
+- [x] Disable Registration module. There is no viable Registration module for D8 so it causes migration errors. Disable and un-install!
+- {x} Disable commerce_coupon. It also causes errors. Disable and un-install!
 
 ### New D8 Site install
 - [x] git clone git@github.com:geerlingguy/drupal-vm.git
@@ -35,7 +38,7 @@
 - [x] Download necessary modules per module audit via composer require
 - [x] Sync activated/installed modules with D7 site
 - [x] Export and store configuration
-- [] I had to reinstall site because I had problems with minimal install profile. *drush site:install standard --account-name="" --account-pass=""*
+- [x] I had to reinstall site because I had problems with minimal install profile. *drush site:install standard --account-name="" --account-pass=""*
 
 ## Migration
     First configuration, then content.
@@ -47,11 +50,20 @@
 - [x] Run *migrate-upgrade* to build migrate_drupal_7 migration group
 - [x] Export and store migrate_drupal_7 migration group
 - [x] Run drush mfs on product related migrations to review source fields we are dealing with
+- [x] For now commerce_shipping is required due to a bug in commerce_migrate_commerce
+- [x] Disable core actions module. There are no compatible actions in D7 site.
 
 #### Product configuration migration
 - [x] Review each product type and the differences in their fields
 - [] Determine how to handle the checkbox fields
 - [] Determine where the 3 items come from in *upgrade_commerce1_product_attribute* migration
+- [x] Install this patch: https://www.drupal.org/files/issues/2020-09-12/commerce_migrate-n3157708-27.patch, which gets rid of commerce1 dependencies. I tried unsuccessfully to add the patch in composer, ended up adding it manually.
+- [x] Run `drush migrate-upgrade --legacy-db-key=migrate --legacy-root=kyi7.vardaman.com --configure-only`
+**HERE I FINALLY HAVE AN ERROR FREE MIGRATION GROUP WITHOUT THE commerce1 DEPENDENCY ISSUE.**
+- [x] Run `drush ms --group=migrate_drupal_7 --tag=Configuration` to check for errors
+- [x] Run `drush migrate:import --group=migrate_drupal_7 --tag=Configuration --execute-dependencies`
+- [x] Run `drush ms --group=migrate_drupal_7 --tag=Configuration`
+
 
 ##### Trial run
 -  Beginning by creating product type broker_education (this creates a product variation type of the same name but the reverse is not true
@@ -61,21 +73,35 @@
 
 ## Random commands
 - COMPOSER_MEMORY_LIMIT=-1 composer require
+- COMPOSER_PROCESS_TIMEOUT=2000 composer update
 - drush site:install minimal --db-url=mysql://user:pass@host/db --site-name=""
-drush site:install standard --account-name="" --account-pass="" --existing-config
+- drush site:install standard --account-name="" --account-pass="" --existing-config
 - 
 - drush migrate-upgrade --legacy-db-url=mysql://kvardaman:pass@12.34.56.78/d6db --legacy-root=http://myd6site.com
 
 - drush migrate-upgrade --legacy-db-key=migrate --legacy-root=kyi7.vardaman.com --configure-only
 - drush migrate-import --all
+- drush ms --group=migrate_drupal_7
 - git commit --amend --author="Kimble <kimble@vardaman.com>"
+- git commit --amend --reset-author
+- `patch -b < c_m_c.patch`
+- drush config-get "system.site" uuid
+drush config-set "system.site" uuid "d802cba4-8354-46f2-89a6-faef5fd1ff7f"
+
 
 ## New resource
 
 https://www.lullabot.com/articles/overview-migrating-drupal-sites-8
-- drush migrate:import --tag=Configuration --execute-dependencies
+- drush migrate:import --group=migrate_drupal_7 --tag=Configuration --execute-dependencies
 - drush migrate:import --tag=Content --execute-dependencies
 - drush migrate:status | grep article
+
+        "patches": {
+            "drupal/commerce_migrate_commerce": {
+                "Invalid dependencies when using Migrate Upgrade": "https://www.drupal.org/files/issues/2019-04-17/recaptcha-ajax-2493183-172.patch"
+            }
+        },
+        "enable-patching": true,
 
 
 
