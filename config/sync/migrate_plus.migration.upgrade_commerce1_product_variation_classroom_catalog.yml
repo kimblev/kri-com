@@ -1,0 +1,177 @@
+uuid: 9b33aa68-4b4f-4721-b562-bc8e299b281b
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_commerce1_product_variation_classroom_catalog
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Commerce
+  - Content
+migration_group: migrate_drupal_7
+label: 'Commerce product variation (Classroom Catalog)'
+source:
+  plugin: commerce1_product
+  product_variation_type: classroom_catalog
+process:
+  variation_id:
+    -
+      plugin: get
+      source: product_id
+  revision_id:
+    -
+      plugin: get
+      source: revision_id
+  sku:
+    -
+      plugin: get
+      source: sku
+  title:
+    -
+      plugin: get
+      source: title
+  type:
+    -
+      plugin: get
+      source: type
+  language:
+    -
+      plugin: get
+      source: language
+  uid:
+    -
+      plugin: get
+      source: uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: changed
+  data:
+    -
+      plugin: get
+      source: data
+  price:
+    -
+      plugin: commerce1_migrate_commerce_price
+      source: commerce_price
+  commerce_price:
+    -
+      plugin: commerce1_migrate_commerce_price
+      source: commerce_price
+  field_product_subtitle:
+    -
+      plugin: get
+      source: field_product_subtitle
+  field_product_image:
+    -
+      plugin: sub_process
+      source: field_product_image
+      process:
+        target_id: fid
+        alt: alt
+        title: title
+        width: width
+        height: height
+  field_product_total_hours:
+    -
+      plugin: get
+      source: field_product_total_hours
+  field_product_summary:
+    -
+      plugin: get
+      source: field_product_summary
+  field_product_description:
+    -
+      plugin: get
+      source: field_product_description
+  field_p_ele_hours:
+    -
+      plugin: get
+      source: field_p_ele_hours
+  field_p_mand_hours:
+    -
+      plugin: get
+      source: field_p_mand_hours
+  field_p_is_pack:
+    -
+      plugin: get
+      source: field_p_is_pack
+  field_is_video_course:
+    -
+      plugin: get
+      source: field_is_video_course
+  field_is_nar_ethics_course:
+    -
+      plugin: get
+      source: field_is_nar_ethics_course
+  field_is_national_speaker:
+    -
+      plugin: get
+      source: field_is_national_speaker
+  field_is_new_course:
+    -
+      plugin: get
+      source: field_is_new_course
+  field_is_ce_available:
+    -
+      plugin: get
+      source: field_is_ce_available
+  field_law_hours:
+    -
+      plugin: get
+      source: field_law_hours
+  field_ple:
+    -
+      plugin: get
+      source: field_ple
+  field_affiliate:
+    -
+      plugin: get
+      source: field_affiliate
+  field_facility:
+    -
+      plugin: get
+      source: field_facility
+  field_location_address:
+    -
+      plugin: get
+      source: field_location_address
+  field_time:
+    -
+      plugin: get
+      source: field_time
+  field_date_classroom:
+    -
+      plugin: sub_process
+      source: field_date_classroom
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: Y-m-d
+          source: value
+  field_metatag:
+    -
+      plugin: d7_metatag_entities
+      source: pseudo_metatag_entities
+destination:
+  plugin: 'entity:commerce_product_variation'
+  destination_module: commerce_product
+  default_bundle: classroom_catalog
+migration_dependencies:
+  required:
+    - upgrade_commerce1_product_variation_type
+  optional:
+    - upgrade_d7_field_instance
+    - upgrade_d7_metatag_field
+    - upgrade_d7_metatag_field_instance
