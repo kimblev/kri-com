@@ -1,13 +1,29 @@
 uuid: 4d0e4e27-8aa7-4e8a-88f0-8ce37cf7f15c
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - menu-about-sub-menu
+      - menu-brokers-sub-menu
+      - menu-designation-sub-menu
+      - menu-events-sub-menu
+      - menu-gri-sub-menu-
+      - main-menu
+      - menu-post-licensing-sub-menu-
+      - menu-pre--licensing
+      - menu-scholarship-sub-menu
+      - menu-top-menu
+    parent: 'main-menu:0:'
 _core:
   default_config_hash: KuyA4NHPXcmKAjRtwa0vQc2ZcyrUJy6IlS2TAyMNRbc
-name: 'Basic page'
+name: 'GRI Application'
 type: page
 description: 'Use <em>basic pages</em> for your static content, such as an ''About us'' page.'
 help: ''
-new_revision: true
+new_revision: false
 preview_mode: 1
 display_submitted: false

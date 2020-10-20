@@ -1,13 +1,27 @@
 uuid: 02257050-dc84-47e7-b631-4c8998418564
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - menu-about-sub-menu
+      - menu-brokers-sub-menu
+      - menu-designation-sub-menu
+      - menu-events-sub-menu
+      - menu-gri-sub-menu-
+      - main-menu
+      - menu-post-licensing-sub-menu-
+      - menu-scholarship-sub-menu
+    parent: 'main-menu:0:'
 _core:
   default_config_hash: AeW1SEDgb1OTQACAWGhzvMknMYAJlcZu0jljfeU3oso
 name: Article
 type: article
 description: 'Use <em>articles</em> for time-sensitive content like news, press releases or blog posts.'
 help: ''
-new_revision: true
+new_revision: false
 preview_mode: 1
 display_submitted: true
