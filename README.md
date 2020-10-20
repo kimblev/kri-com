@@ -45,13 +45,14 @@
 
 ### Configuration migration
 - [x] Start new git branch
-- [x] Add *ini_set('memory_limit', '-1');* to seetings.php to prevent memory errors
+- [x] Add *ini_set('memory_limit', '-1');* to settings.php to prevent memory errors
 - [x] Run *migrate-status* to see what's there and what isn't
 - [x] Run *migrate-upgrade* to build migrate_drupal_7 migration group
 - [x] Export and store migrate_drupal_7 migration group
 - [x] Run drush mfs on product related migrations to review source fields we are dealing with
 - [x] For now commerce_shipping is required due to a bug in commerce_migrate_commerce
 - [x] Disable core actions module. There are no compatible actions in D7 site.
+- [x] Disable comments module
 
 #### Product configuration migration
 - [x] Review each product type and the differences in their fields
@@ -103,6 +104,43 @@ https://www.lullabot.com/articles/overview-migrating-drupal-sites-8
         },
         "enable-patching": true,
 
+## Remove and repeat a migration
+- Rollback drush migrate:rollback --group=migrate_drupal_7 --tag=Configuration
+- Delete migration group in migrate manager
+- drush cex -y
+- Commit
+- drush cr
+- Check status: drush ms --group=migrate_drupal_7 --tag=Configuration
+**Now the old migration is gone - begin new one**
+- drush migrate-upgrade --legacy-db-key=migrate --legacy-root=http://kyi7.vardaman.com --configure-only
+- Check status: drush ms --group=migrate_drupal_7 --tag=Configuration
+- drush cst //check differences in case something does not belong
+- drush cex -y
+- Remove these migration files:
+-- adminimal.settings.yml
+-- kyrealtors.settings.yml
+-- migrate_plus.migration.upgrade_action_settings
+-- migrate_plus.migration.upgrade_commerce1_shipping_flat_rate
+-- migrate_plus.migration.upgrade_d7_action
+-- migrate_plus.migration.upgrade_d7_comment* // All comment migration files
+-- ?? Product displays ??
+- drush cim -y
+- Check status: drush ms --group=migrate_drupal_7 --tag=Configuration
+- Commit
+- drush migrate:import --group=migrate_drupal_7 --tag=Configuration --execute-dependencies
 
+
+I had to use this to fnd the offending entities:
+SELECT *
+FROM `field_config_instance`
+WHERE (`entity_type` LIKE '%registration%')
+ORDER BY `entity_type`
+LIMIT 50
+
+And this to get rid of them:
+DELETE 
+FROM `field_config_instance`
+WHERE (`entity_type` LIKE '%registration%')
+ORDER BY `entity_type`
 
 
