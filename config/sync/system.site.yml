@@ -1,11 +1,11 @@
 uuid: d802cba4-8354-46f2-89a6-faef5fd1ff7f
-name: 'Drush Site-Install'
-mail: admin@example.com
+name: 'Kentucky Realtor Institute'
+mail: info@kyrealtorinstitute.com
 slogan: ''
 page:
-  403: ''
-  404: ''
-  front: /node
+  403: /
+  404: /
+  front: /node/20
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en
