@@ -1,0 +1,23 @@
+uuid: f7c0c3dd-e3d9-43ef-8ec6-2c77df62a3db
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.broker_education
+    - field.storage.commerce_product_variation.field_is_new_course
+id: commerce_product_variation.broker_education.field_is_new_course
+field_name: field_is_new_course
+entity_type: commerce_product_variation
+bundle: broker_education
+label: 'Is New Course'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'New Course'
+  off_label: ''
+field_type: boolean

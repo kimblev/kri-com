@@ -1,0 +1,36 @@
+uuid: 5d145088-6ff4-41be-8de1-d361df2fa049
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.person
+id: paragraph.person.default
+targetEntityType: paragraph
+bundle: person
+mode: default
+content:
+  field_bio:
+    weight: 1
+    type: text_textarea
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_headshot:
+    weight: 2
+    type: image_image
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_title:
+    weight: 0
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

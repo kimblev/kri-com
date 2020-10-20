@@ -1,0 +1,21 @@
+uuid: 637d1557-69dd-42e1-8756-0e4bba07d4a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pre_license_product
+    - node.type.product_display_pre
+id: node.product_display_pre.field_pre_license_product
+field_name: field_pre_license_product
+entity_type: node
+bundle: product_display_pre
+label: 'Pre-License Product'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings: {  }
+field_type: entity_reference

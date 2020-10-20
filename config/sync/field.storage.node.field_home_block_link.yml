@@ -1,0 +1,19 @@
+uuid: db7631c3-82c8-4f43-b20a-8133673b6f93
+langcode: und
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_home_block_link
+field_name: field_home_block_link
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

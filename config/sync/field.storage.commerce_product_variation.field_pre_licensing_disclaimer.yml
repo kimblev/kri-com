@@ -1,0 +1,19 @@
+uuid: cab24c75-b208-4cd9-8ece-27f4d9326326
+langcode: und
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - text
+id: commerce_product_variation.field_pre_licensing_disclaimer
+field_name: field_pre_licensing_disclaimer
+entity_type: commerce_product_variation
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

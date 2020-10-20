@@ -1,0 +1,14 @@
+uuid: 5bf20d7b-9bf4-4cb8-ba37-e3256a0488fe
+langcode: en
+status: true
+dependencies: {  }
+name: 'PHP code'
+format: php_code
+weight: 11
+filters:
+  filter_null:
+    id: filter_null
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }

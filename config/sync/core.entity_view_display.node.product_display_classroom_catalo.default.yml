@@ -1,0 +1,32 @@
+uuid: fc137fe1-4ab3-4654-80ed-452e86aaef70
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.product_display_classroom_catalo.body
+    - field.field.node.product_display_classroom_catalo.field_classroom_catalog
+    - field.field.node.product_display_classroom_catalo.field_metatag
+    - node.type.product_display_classroom_catalo
+  module:
+    - text
+    - user
+id: node.product_display_classroom_catalo.default
+targetEntityType: node
+bundle: product_display_classroom_catalo
+mode: default
+content:
+  body:
+    label: hidden
+    weight: 0
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_classroom_catalog: true
+  field_metatag: true

@@ -1,0 +1,21 @@
+uuid: 4ab864e7-7d54-42a8-acd2-73248aa09fc4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hotel
+    - node.type.special_events_page
+  module:
+    - text
+id: node.special_events_page.field_hotel
+field_name: field_hotel
+entity_type: node
+bundle: special_events_page
+label: Hotel
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

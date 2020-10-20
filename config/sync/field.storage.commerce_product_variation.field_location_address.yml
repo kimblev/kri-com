@@ -1,0 +1,21 @@
+uuid: 6c665211-7d14-4d4e-97b2-d977f309f108
+langcode: und
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product_variation.field_location_address
+field_name: field_location_address
+entity_type: commerce_product_variation
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

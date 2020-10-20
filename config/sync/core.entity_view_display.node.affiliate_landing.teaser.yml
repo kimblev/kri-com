@@ -1,0 +1,36 @@
+uuid: d8acd54b-1aa9-4340-8ff6-3f11e3ac8a13
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.affiliate_landing.body
+    - field.field.node.affiliate_landing.field_affiliate_big_picture
+    - field.field.node.affiliate_landing.field_affiliate_logo
+    - field.field.node.affiliate_landing.field_metatag
+    - node.type.affiliate_landing
+  module:
+    - text
+    - user
+id: node.affiliate_landing.teaser
+targetEntityType: node
+bundle: affiliate_landing
+mode: teaser
+content:
+  body:
+    label: hidden
+    weight: 0
+    type: text_summary_or_trimmed
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_affiliate_big_picture: true
+  field_affiliate_logo: true
+  field_metatag: true

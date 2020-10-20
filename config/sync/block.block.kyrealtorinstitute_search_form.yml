@@ -1,0 +1,23 @@
+uuid: ca0c3eff-c9a0-4723-ab81-e4437fe92998
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - kyrealtorinstitute
+_core:
+  default_config_hash: Q-4EcGAsu26ICu4ejEz0uE1zv4akpiaOsizxgZfAmEw
+id: kyrealtorinstitute_search_form
+theme: kyrealtorinstitute
+region: sidebar_first
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: ''
+  provider: search
+  label_display: '0'
+  page_id: ''
+visibility: {  }

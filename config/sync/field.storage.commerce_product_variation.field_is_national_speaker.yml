@@ -1,0 +1,18 @@
+uuid: 5d3a0895-4570-4cbf-a92f-8b6a7bdc912a
+langcode: und
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product_variation.field_is_national_speaker
+field_name: field_is_national_speaker
+entity_type: commerce_product_variation
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

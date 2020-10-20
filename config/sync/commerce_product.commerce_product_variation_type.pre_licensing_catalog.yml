@@ -1,0 +1,10 @@
+uuid: b081625f-954f-4408-9734-3a96b7f24916
+langcode: en
+status: true
+dependencies: {  }
+id: pre_licensing_catalog
+label: 'Pre-Licensing Catalog'
+orderItemType: default
+generateTitle: false
+traits: {  }
+locked: false

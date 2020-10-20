@@ -1,0 +1,12 @@
+uuid: e966e800-e268-49c7-a53e-25ef47bda1ba
+langcode: en
+status: true
+dependencies: {  }
+id: product_display_classroom_catalo
+label: 'Product Display Classroom Catalog'
+description: ''
+variationType: classroom_catalog
+multipleVariations: true
+injectVariationFields: true
+traits: {  }
+locked: false

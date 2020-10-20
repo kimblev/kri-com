@@ -1,0 +1,8 @@
+uuid: 1c3305dc-22c6-49ee-97cb-da01255100ce
+langcode: en
+status: true
+dependencies: {  }
+id: menu-designation-sub-menu
+label: 'Designation Sub Menu'
+description: ''
+locked: false

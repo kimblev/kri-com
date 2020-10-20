@@ -1,0 +1,10 @@
+uuid: 5fd22a31-302b-4f9f-b539-9ac65926da6f
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product_variation.node_rss
+label: node_rss
+targetEntityType: commerce_product_variation
+cache: true

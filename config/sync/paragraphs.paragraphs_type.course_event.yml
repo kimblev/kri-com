@@ -1,0 +1,10 @@
+uuid: d309d725-7bf0-4abf-9860-380e9f4d19ca
+langcode: en
+status: true
+dependencies: {  }
+id: course_event
+label: Course/Event
+icon_uuid: null
+icon_default: null
+description: 'Migrated from paragraph bundle Course/Event'
+behavior_plugins: {  }

@@ -1,0 +1,10 @@
+uuid: c63f6c1d-05ef-4002-880b-318134bae751
+langcode: en
+status: true
+dependencies: {  }
+label: commerce_discount
+id: commerce_discount
+purchasableEntityType: commerce_product_variation
+orderType: default
+traits: {  }
+locked: false

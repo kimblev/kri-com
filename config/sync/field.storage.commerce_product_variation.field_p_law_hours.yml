@@ -1,0 +1,20 @@
+uuid: a045b1dc-ffe3-4d4f-b22f-7112de9427c7
+langcode: und
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product_variation.field_p_law_hours
+field_name: field_p_law_hours
+entity_type: commerce_product_variation
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

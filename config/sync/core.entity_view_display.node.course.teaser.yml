@@ -1,0 +1,34 @@
+uuid: c7d97ee7-1126-4d31-b680-0758e7cbf55c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.course.body
+    - field.field.node.course.field_course_association
+    - field.field.node.course.field_metatag
+    - node.type.course
+  module:
+    - text
+    - user
+id: node.course.teaser
+targetEntityType: node
+bundle: course
+mode: teaser
+content:
+  body:
+    label: hidden
+    weight: 0
+    type: text_summary_or_trimmed
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_course_association: true
+  field_metatag: true

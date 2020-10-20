@@ -1,0 +1,23 @@
+uuid: 497897de-9022-4916-b137-c1cce74f5241
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.post_licensing
+    - field.storage.commerce_product_variation.field_product_total_hours
+id: commerce_product_variation.post_licensing.field_product_total_hours
+field_name: field_product_total_hours
+entity_type: commerce_product_variation
+bundle: post_licensing
+label: 'Product Total Hours'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

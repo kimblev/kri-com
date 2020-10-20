@@ -1,0 +1,21 @@
+uuid: 3742e0f6-e2c9-4110-ab95-d79e3c223a86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatag
+    - node.type.product_display_classroom_catalo
+  module:
+    - metatag
+id: node.product_display_classroom_catalo.field_metatag
+field_name: field_metatag
+entity_type: node
+bundle: product_display_classroom_catalo
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

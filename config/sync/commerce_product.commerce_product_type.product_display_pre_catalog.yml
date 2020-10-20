@@ -1,0 +1,12 @@
+uuid: 4ca8dbff-44fc-475d-b7d8-a62f030ffa98
+langcode: en
+status: true
+dependencies: {  }
+id: product_display_pre_catalog
+label: 'Product Display Pre Catalog'
+description: ''
+variationType: pre_licensing_catalog
+multipleVariations: true
+injectVariationFields: true
+traits: {  }
+locked: false

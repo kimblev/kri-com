@@ -1,0 +1,78 @@
+uuid: 36dd7671-488c-4bd1-9030-4550f7413011
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.ce
+    - core.entity_view_mode.commerce_product_variation.node_revision
+    - field.field.commerce_product_variation.ce.commerce_price
+    - field.field.commerce_product_variation.ce.field_add_to_cart
+    - field.field.commerce_product_variation.ce.field_display_in_new_catalog
+    - field.field.commerce_product_variation.ce.field_is_nar_ethics_course
+    - field.field.commerce_product_variation.ce.field_is_national_speaker
+    - field.field.commerce_product_variation.ce.field_is_new_course
+    - field.field.commerce_product_variation.ce.field_is_video_course
+    - field.field.commerce_product_variation.ce.field_p_ele_hours
+    - field.field.commerce_product_variation.ce.field_p_is_pack
+    - field.field.commerce_product_variation.ce.field_p_law_hours
+    - field.field.commerce_product_variation.ce.field_product_description
+    - field.field.commerce_product_variation.ce.field_product_image
+    - field.field.commerce_product_variation.ce.field_product_subtitle
+    - field.field.commerce_product_variation.ce.field_product_summary
+    - field.field.commerce_product_variation.ce.field_product_total_hours
+    - field.field.commerce_product_variation.ce.field_register_link
+    - field.field.commerce_product_variation.ce.field_show_add_to_cart_button
+  module:
+    - commerce_price
+id: commerce_product_variation.ce.node_revision
+targetEntityType: commerce_product_variation
+bundle: ce
+mode: node_revision
+content:
+  commerce_price:
+    label: hidden
+    weight: 0
+    type: commerce_price_default
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+    region: content
+  list_price:
+    label: above
+    type: commerce_price_default
+    weight: -1
+    region: content
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+  price:
+    label: above
+    type: commerce_price_default
+    weight: 0
+    region: content
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+hidden:
+  field_add_to_cart: true
+  field_display_in_new_catalog: true
+  field_is_nar_ethics_course: true
+  field_is_national_speaker: true
+  field_is_new_course: true
+  field_is_video_course: true
+  field_p_ele_hours: true
+  field_p_is_pack: true
+  field_p_law_hours: true
+  field_product_description: true
+  field_product_image: true
+  field_product_subtitle: true
+  field_product_summary: true
+  field_product_total_hours: true
+  field_register_link: true
+  field_show_add_to_cart_button: true
+  product_id: true
+  sku: true
+  title: true

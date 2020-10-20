@@ -1,0 +1,21 @@
+uuid: 2f111e2c-cf1d-4e77-a1f9-a80c9498f5dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sponsors
+    - node.type.special_events_page
+  module:
+    - text
+id: node.special_events_page.field_sponsors
+field_name: field_sponsors
+entity_type: node
+bundle: special_events_page
+label: Sponsors
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

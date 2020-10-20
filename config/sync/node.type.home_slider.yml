@@ -1,0 +1,16 @@
+uuid: 4a9c40e1-e5b3-4556-8efa-6d6ca34e738d
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    parent: 'main-menu:0:'
+name: 'Home Slider'
+type: home_slider
+description: 'Add a slide to the home page slider'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

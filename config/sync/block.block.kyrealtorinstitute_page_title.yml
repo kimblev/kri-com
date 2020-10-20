@@ -1,0 +1,20 @@
+uuid: 3a2c3d1c-2b0a-4b07-923e-0090b1c602f1
+langcode: en
+status: true
+dependencies:
+  theme:
+    - kyrealtorinstitute
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: kyrealtorinstitute_page_title
+theme: kyrealtorinstitute
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,23 @@
+uuid: 024efee5-372f-4d90-babe-99f47d84a629
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.product_display_broker_education
+  module:
+    - text
+id: node.product_display_broker_education.body
+field_name: body
+entity_type: node
+bundle: product_display_broker_education
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

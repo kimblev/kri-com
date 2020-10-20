@@ -1,0 +1,32 @@
+uuid: c624c201-c8d1-42a4-9f2e-0ca6b50ce3b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.webform.field_body
+    - field.field.node.webform.field_header_image
+    - field.field.node.webform.field_metatag
+    - node.type.webform
+  module:
+    - text
+    - user
+id: node.webform.default
+targetEntityType: node
+bundle: webform
+mode: default
+content:
+  field_body:
+    label: hidden
+    weight: 0
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_header_image: true
+  field_metatag: true

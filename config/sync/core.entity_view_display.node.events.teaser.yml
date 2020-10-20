@@ -1,0 +1,46 @@
+uuid: 44178402-c1e7-4c5a-a4ab-272a32641167
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.events.body
+    - field.field.node.events.field_date
+    - field.field.node.events.field_event_link
+    - field.field.node.events.field_event_type
+    - field.field.node.events.field_header_image
+    - field.field.node.events.field_location
+    - field.field.node.events.field_metatag
+    - field.field.node.events.field_registration_closes
+    - field.field.node.events.field_registration_opens
+    - node.type.events
+  module:
+    - text
+    - user
+id: node.events.teaser
+targetEntityType: node
+bundle: events
+mode: teaser
+content:
+  body:
+    label: hidden
+    weight: 0
+    type: text_summary_or_trimmed
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_date: true
+  field_event_link: true
+  field_event_type: true
+  field_header_image: true
+  field_location: true
+  field_metatag: true
+  field_registration_closes: true
+  field_registration_opens: true

@@ -1,0 +1,10 @@
+uuid: debff02e-7b59-4676-a2a3-517a3de232c8
+langcode: en
+status: true
+dependencies: {  }
+id: pre_licensing
+label: Pre-Licensing
+orderItemType: default
+generateTitle: false
+traits: {  }
+locked: false

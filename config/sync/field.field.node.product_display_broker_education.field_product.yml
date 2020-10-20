@@ -1,0 +1,21 @@
+uuid: 0e59c423-6044-4423-b538-44f233c6a095
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_product
+    - node.type.product_display_broker_education
+id: node.product_display_broker_education.field_product
+field_name: field_product
+entity_type: node
+bundle: product_display_broker_education
+label: Product
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings: {  }
+field_type: entity_reference

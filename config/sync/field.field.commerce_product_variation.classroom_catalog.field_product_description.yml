@@ -1,0 +1,21 @@
+uuid: 86fe0167-4f41-4082-95aa-fd4c535c1ea1
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.classroom_catalog
+    - field.storage.commerce_product_variation.field_product_description
+  module:
+    - text
+id: commerce_product_variation.classroom_catalog.field_product_description
+field_name: field_product_description
+entity_type: commerce_product_variation
+bundle: classroom_catalog
+label: 'Product Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

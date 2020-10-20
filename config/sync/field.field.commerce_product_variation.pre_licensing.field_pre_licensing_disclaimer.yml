@@ -1,0 +1,21 @@
+uuid: b694d566-6846-462f-ac43-7be79764763b
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.pre_licensing
+    - field.storage.commerce_product_variation.field_pre_licensing_disclaimer
+  module:
+    - text
+id: commerce_product_variation.pre_licensing.field_pre_licensing_disclaimer
+field_name: field_pre_licensing_disclaimer
+entity_type: commerce_product_variation
+bundle: pre_licensing
+label: 'Pre-Licensing Disclaimer'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

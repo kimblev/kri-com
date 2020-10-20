@@ -1,0 +1,23 @@
+uuid: 0410fb63-1e17-49c4-9448-a7b61d03706c
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.classroom_catalog
+    - field.storage.commerce_product_variation.field_is_ce_available
+id: commerce_product_variation.classroom_catalog.field_is_ce_available
+field_name: field_is_ce_available
+entity_type: commerce_product_variation
+bundle: classroom_catalog
+label: 'Is CE Available'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Available as CE Course'
+  off_label: ''
+field_type: boolean

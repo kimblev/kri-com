@@ -1,0 +1,45 @@
+uuid: 5ba35025-56f3-47e4-8fc7-25cee108495d
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.product
+    - field.field.commerce_product_variation.product.commerce_price
+  module:
+    - commerce_price
+id: commerce_product_variation.product.default
+targetEntityType: commerce_product_variation
+bundle: product
+mode: default
+content:
+  commerce_price:
+    label: hidden
+    weight: 0
+    type: commerce_price_default
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+    region: content
+  list_price:
+    label: above
+    type: commerce_price_default
+    weight: -1
+    region: content
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+  price:
+    label: above
+    type: commerce_price_default
+    weight: 0
+    region: content
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+hidden:
+  product_id: true
+  sku: true
+  title: true

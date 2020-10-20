@@ -1,0 +1,19 @@
+uuid: 7660f812-4ac9-4341-8d70-f23f81659aad
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.post_licensing
+    - field.storage.commerce_product_variation.field_law_hours
+id: commerce_product_variation.post_licensing.field_law_hours
+field_name: field_law_hours
+entity_type: commerce_product_variation
+bundle: post_licensing
+label: 'Law Hours'
+description: 'CE Courses usually uses Law Hours'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

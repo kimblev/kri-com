@@ -1,0 +1,25 @@
+uuid: 8fef2cf2-ca38-47be-88c7-bdd0d011d792
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - menu-about-sub-menu
+      - menu-brokers-sub-menu
+      - menu-designation-sub-menu
+      - menu-events-sub-menu
+      - menu-gri-sub-menu-
+      - main-menu
+      - menu-post-licensing-sub-menu-
+      - menu-scholarship-sub-menu
+    parent: 'menu-about-sub-menu:0:'
+name: Events
+type: events
+description: 'Add Events to the Calendar'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

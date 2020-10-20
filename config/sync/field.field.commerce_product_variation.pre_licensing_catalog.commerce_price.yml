@@ -1,0 +1,22 @@
+uuid: c8ba529b-a274-404d-880b-43ef70bc51fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.pre_licensing_catalog
+    - field.storage.commerce_product_variation.commerce_price
+  module:
+    - commerce_price
+id: commerce_product_variation.pre_licensing_catalog.commerce_price
+field_name: commerce_price
+entity_type: commerce_product_variation
+bundle: pre_licensing_catalog
+label: Price
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_currencies: {  }
+field_type: commerce_price

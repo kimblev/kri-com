@@ -1,0 +1,146 @@
+uuid: cae0b2e6-ec77-4346-a8bc-9865efbefd6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.post_licensing
+    - field.field.commerce_product_variation.post_licensing.commerce_price
+    - field.field.commerce_product_variation.post_licensing.field_affiliate
+    - field.field.commerce_product_variation.post_licensing.field_is_ce_available
+    - field.field.commerce_product_variation.post_licensing.field_is_nar_ethics_course
+    - field.field.commerce_product_variation.post_licensing.field_is_national_speaker
+    - field.field.commerce_product_variation.post_licensing.field_is_new_course
+    - field.field.commerce_product_variation.post_licensing.field_is_video_course
+    - field.field.commerce_product_variation.post_licensing.field_law_hours
+    - field.field.commerce_product_variation.post_licensing.field_p_ele_hours
+    - field.field.commerce_product_variation.post_licensing.field_p_is_pack
+    - field.field.commerce_product_variation.post_licensing.field_p_mand_hours
+    - field.field.commerce_product_variation.post_licensing.field_ple
+    - field.field.commerce_product_variation.post_licensing.field_product_description
+    - field.field.commerce_product_variation.post_licensing.field_product_image
+    - field.field.commerce_product_variation.post_licensing.field_product_subtitle
+    - field.field.commerce_product_variation.post_licensing.field_product_summary
+    - field.field.commerce_product_variation.post_licensing.field_product_total_hours
+  module:
+    - commerce_price
+    - image
+    - options
+    - text
+id: commerce_product_variation.post_licensing.default
+targetEntityType: commerce_product_variation
+bundle: post_licensing
+mode: default
+content:
+  commerce_price:
+    label: hidden
+    weight: 3
+    type: commerce_price_default
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+    region: content
+  field_is_nar_ethics_course:
+    label: hidden
+    weight: 11
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_is_national_speaker:
+    label: hidden
+    weight: 12
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_is_new_course:
+    label: hidden
+    weight: 13
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_is_video_course:
+    label: hidden
+    weight: 10
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_p_ele_hours:
+    label: hidden
+    weight: 8
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_p_mand_hours:
+    label: hidden
+    weight: 9
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_product_description:
+    label: hidden
+    weight: 7
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_product_image:
+    label: hidden
+    weight: 1
+    type: image
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+  field_product_summary:
+    label: hidden
+    weight: 6
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_product_total_hours:
+    label: hidden
+    weight: 5
+    type: number_integer
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    region: content
+  list_price:
+    label: above
+    type: commerce_price_default
+    weight: -1
+    region: content
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+  price:
+    label: above
+    type: commerce_price_default
+    weight: 0
+    region: content
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+hidden:
+  field_affiliate: true
+  field_is_ce_available: true
+  field_law_hours: true
+  field_p_is_pack: true
+  field_ple: true
+  field_product_subtitle: true
+  product_id: true
+  sku: true
+  title: true

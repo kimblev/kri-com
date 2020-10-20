@@ -1,0 +1,122 @@
+uuid: 4ffe2e2b-7b94-4ab5-abdb-09401fa4de31
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.pre_licensing_catalog
+    - field.field.commerce_product_variation.pre_licensing_catalog.commerce_price
+    - field.field.commerce_product_variation.pre_licensing_catalog.field_is_nar_ethics_course
+    - field.field.commerce_product_variation.pre_licensing_catalog.field_is_national_speaker
+    - field.field.commerce_product_variation.pre_licensing_catalog.field_is_new_course
+    - field.field.commerce_product_variation.pre_licensing_catalog.field_is_video_course
+    - field.field.commerce_product_variation.pre_licensing_catalog.field_law_hours
+    - field.field.commerce_product_variation.pre_licensing_catalog.field_p_is_pack
+    - field.field.commerce_product_variation.pre_licensing_catalog.field_product_description
+    - field.field.commerce_product_variation.pre_licensing_catalog.field_product_image
+    - field.field.commerce_product_variation.pre_licensing_catalog.field_product_subtitle
+    - field.field.commerce_product_variation.pre_licensing_catalog.field_product_summary
+    - field.field.commerce_product_variation.pre_licensing_catalog.field_product_total_hours
+  module:
+    - commerce_price
+    - image
+    - options
+    - text
+id: commerce_product_variation.pre_licensing_catalog.default
+targetEntityType: commerce_product_variation
+bundle: pre_licensing_catalog
+mode: default
+content:
+  commerce_price:
+    label: hidden
+    weight: 0
+    type: commerce_price_default
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+    region: content
+  field_is_nar_ethics_course:
+    label: hidden
+    weight: 8
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_is_national_speaker:
+    label: hidden
+    weight: 9
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_is_new_course:
+    label: hidden
+    weight: 10
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_is_video_course:
+    label: hidden
+    weight: 7
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_product_description:
+    label: hidden
+    weight: 5
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_product_image:
+    label: hidden
+    weight: 1
+    type: image
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+  field_product_summary:
+    label: hidden
+    weight: 4
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_product_total_hours:
+    label: hidden
+    weight: 3
+    type: number_integer
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    region: content
+  list_price:
+    label: above
+    type: commerce_price_default
+    weight: -1
+    region: content
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+  price:
+    label: above
+    type: commerce_price_default
+    weight: 0
+    region: content
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+hidden:
+  field_law_hours: true
+  field_p_is_pack: true
+  field_product_subtitle: true
+  product_id: true
+  sku: true
+  title: true

@@ -1,0 +1,10 @@
+uuid: d8482fc4-4648-4a35-967c-44b504ca1b65
+langcode: en
+status: true
+dependencies: {  }
+id: broker_education
+label: 'Broker Education'
+orderItemType: default
+generateTitle: false
+traits: {  }
+locked: false

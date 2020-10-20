@@ -1,0 +1,8 @@
+uuid: 73314041-3cf0-430c-91b1-1c6166428307
+langcode: en
+status: true
+dependencies: {  }
+name: 'Course Association'
+vid: course_association
+description: ''
+weight: 0

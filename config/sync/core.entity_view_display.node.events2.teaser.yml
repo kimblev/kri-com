@@ -1,0 +1,102 @@
+uuid: 758653f5-35f2-422f-8690-a4b31ec491d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.events2.body
+    - field.field.node.events2.field_date
+    - field.field.node.events2.field_event_date
+    - field.field.node.events2.field_event_fee
+    - field.field.node.events2.field_event_instructor
+    - field.field.node.events2.field_event_registration_link
+    - field.field.node.events2.field_event_requirements_link
+    - field.field.node.events2.field_event_type
+    - field.field.node.events2.field_location
+    - field.field.node.events2.field_location_url
+    - field.field.node.events2.field_metatag
+    - node.type.events2
+  module:
+    - datetime
+    - text
+    - user
+id: node.events2.teaser
+targetEntityType: node
+bundle: events2
+mode: teaser
+content:
+  body:
+    label: hidden
+    weight: 0
+    type: text_summary_or_trimmed
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_date:
+    label: inline
+    weight: 1
+    type: datetime_default
+    settings:
+      format_type: long
+      timezone_override: ''
+    third_party_settings: {  }
+    region: content
+  field_event_date:
+    label: above
+    weight: 7
+    type: datetime_default
+    settings:
+      format_type: long
+      timezone_override: ''
+    third_party_settings: {  }
+    region: content
+  field_event_fee:
+    label: inline
+    weight: 4
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_event_instructor:
+    label: inline
+    weight: 3
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_event_registration_link:
+    label: above
+    weight: 6
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_location:
+    label: inline
+    weight: 2
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_location_url:
+    label: above
+    weight: 5
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_event_requirements_link: true
+  field_event_type: true
+  field_metatag: true

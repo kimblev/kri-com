@@ -1,0 +1,19 @@
+uuid: 2d590b8d-995a-4806-a7b0-53afcf12ac8f
+langcode: en
+status: true
+dependencies: {  }
+id: authnet_acceptjs
+label: authnet_acceptjs
+weight: null
+plugin: manual
+configuration:
+  instructions:
+    value: ''
+    format: plain_text
+  display_label: Manual
+  mode: n/a
+  payment_method_types:
+    - credit_card
+  collect_billing_information: true
+conditions: {  }
+conditionOperator: AND

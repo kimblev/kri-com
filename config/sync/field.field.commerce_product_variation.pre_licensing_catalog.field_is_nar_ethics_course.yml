@@ -1,0 +1,21 @@
+uuid: f4c76c85-6c8f-4a26-9bb0-1fc069174120
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.pre_licensing_catalog
+    - field.storage.commerce_product_variation.field_is_nar_ethics_course
+id: commerce_product_variation.pre_licensing_catalog.field_is_nar_ethics_course
+field_name: field_is_nar_ethics_course
+entity_type: commerce_product_variation
+bundle: pre_licensing_catalog
+label: 'Is NAR Ethics Course'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'NAR Ethics'
+  off_label: ''
+field_type: boolean

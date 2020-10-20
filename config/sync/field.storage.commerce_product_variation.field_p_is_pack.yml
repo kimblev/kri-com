@@ -1,0 +1,18 @@
+uuid: 0335a0b5-b910-462f-b947-ce31e9635cf1
+langcode: und
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product_variation.field_p_is_pack
+field_name: field_p_is_pack
+entity_type: commerce_product_variation
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

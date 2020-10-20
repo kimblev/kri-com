@@ -1,0 +1,19 @@
+uuid: d578b3fd-6f44-49ac-82be-6605119a82be
+langcode: und
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - text
+id: commerce_product_variation.field_product_summary
+field_name: field_product_summary
+entity_type: commerce_product_variation
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

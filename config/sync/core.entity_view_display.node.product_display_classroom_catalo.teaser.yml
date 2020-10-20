@@ -1,0 +1,34 @@
+uuid: 06c0247b-073e-47b2-bb85-e13f7128c903
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.product_display_classroom_catalo.body
+    - field.field.node.product_display_classroom_catalo.field_classroom_catalog
+    - field.field.node.product_display_classroom_catalo.field_metatag
+    - node.type.product_display_classroom_catalo
+  module:
+    - text
+    - user
+id: node.product_display_classroom_catalo.teaser
+targetEntityType: node
+bundle: product_display_classroom_catalo
+mode: teaser
+content:
+  body:
+    label: hidden
+    weight: 0
+    type: text_summary_or_trimmed
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_classroom_catalog: true
+  field_metatag: true

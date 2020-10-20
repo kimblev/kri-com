@@ -1,0 +1,32 @@
+uuid: 88b5996b-94df-4316-8e57-cc79b73e6027
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.product_display_ce.body
+    - field.field.node.product_display_ce.field_ce_product
+    - field.field.node.product_display_ce.field_metatag
+    - node.type.product_display_ce
+  module:
+    - text
+    - user
+id: node.product_display_ce.default
+targetEntityType: node
+bundle: product_display_ce
+mode: default
+content:
+  body:
+    label: hidden
+    weight: 0
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_ce_product: true
+  field_metatag: true

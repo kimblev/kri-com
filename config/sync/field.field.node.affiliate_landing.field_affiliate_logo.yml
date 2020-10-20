@@ -1,0 +1,38 @@
+uuid: 42fea72e-ecb3-4d80-9a5e-687d7e1ba8ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_affiliate_logo
+    - node.type.affiliate_landing
+  module:
+    - image
+id: node.affiliate_landing.field_affiliate_logo
+field_name: field_affiliate_logo
+entity_type: node
+bundle: affiliate_landing
+label: 'Affiliate Logo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: ''
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  title_field: false
+  default_image:
+    alt: ''
+    title: ''
+    width: null
+    height: null
+    uuid: ''
+  alt_field_required: true
+  title_field_required: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

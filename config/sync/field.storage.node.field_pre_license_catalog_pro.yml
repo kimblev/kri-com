@@ -1,0 +1,19 @@
+uuid: d6946597-6759-468e-976a-6bd8aa4cd2eb
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_pre_license_catalog_pro
+field_name: field_pre_license_catalog_pro
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

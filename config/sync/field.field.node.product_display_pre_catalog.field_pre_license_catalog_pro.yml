@@ -1,0 +1,21 @@
+uuid: 6adc43c7-e438-40f1-b0ee-0c4cfcda45bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pre_license_catalog_pro
+    - node.type.product_display_pre_catalog
+id: node.product_display_pre_catalog.field_pre_license_catalog_pro
+field_name: field_pre_license_catalog_pro
+entity_type: node
+bundle: product_display_pre_catalog
+label: 'Pre-License Catalog Pro'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings: {  }
+field_type: entity_reference

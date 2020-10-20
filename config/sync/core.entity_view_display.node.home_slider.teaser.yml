@@ -1,0 +1,36 @@
+uuid: 3bad28f5-80aa-4e14-973d-417aef6d5c19
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.home_slider.body
+    - field.field.node.home_slider.field_metatag
+    - field.field.node.home_slider.field_slide_image
+    - field.field.node.home_slider.field_slide_link
+    - node.type.home_slider
+  module:
+    - text
+    - user
+id: node.home_slider.teaser
+targetEntityType: node
+bundle: home_slider
+mode: teaser
+content:
+  body:
+    label: hidden
+    weight: 0
+    type: text_summary_or_trimmed
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_metatag: true
+  field_slide_image: true
+  field_slide_link: true

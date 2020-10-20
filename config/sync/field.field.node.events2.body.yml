@@ -1,0 +1,23 @@
+uuid: cd181449-7d13-4901-b801-b7530d94f7f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.events2
+  module:
+    - text
+id: node.events2.body
+field_name: body
+entity_type: node
+bundle: events2
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

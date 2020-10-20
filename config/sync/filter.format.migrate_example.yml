@@ -1,0 +1,14 @@
+uuid: bb87387b-6a2a-41d1-b837-f04e56a7f01e
+langcode: en
+status: false
+dependencies: {  }
+name: 'Migrate example format'
+format: migrate_example
+weight: 20
+filters:
+  filter_html_escape:
+    id: filter_html_escape
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }

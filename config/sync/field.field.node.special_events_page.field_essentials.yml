@@ -1,0 +1,21 @@
+uuid: ebddd78a-eab7-47a3-880d-44578b313db9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_essentials
+    - node.type.special_events_page
+  module:
+    - text
+id: node.special_events_page.field_essentials
+field_name: field_essentials
+entity_type: node
+bundle: special_events_page
+label: Essentials
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

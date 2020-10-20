@@ -1,0 +1,51 @@
+uuid: 0125e673-a1b1-45e7-9168-331410a3b157
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.affiliate_landing.body
+    - field.field.node.affiliate_landing.field_affiliate_big_picture
+    - field.field.node.affiliate_landing.field_affiliate_logo
+    - field.field.node.affiliate_landing.field_metatag
+    - node.type.affiliate_landing
+  module:
+    - image
+    - text
+    - user
+id: node.affiliate_landing.default
+targetEntityType: node
+bundle: affiliate_landing
+mode: default
+content:
+  body:
+    label: hidden
+    weight: 4
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_affiliate_big_picture:
+    label: hidden
+    weight: 3
+    type: image
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+  field_affiliate_logo:
+    label: hidden
+    weight: 2
+    type: image
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_metatag: true

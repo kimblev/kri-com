@@ -1,0 +1,22 @@
+uuid: 38245438-6c9d-4ee3-8351-9602d5dd0e29
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.ce
+    - field.storage.commerce_product_variation.commerce_price
+  module:
+    - commerce_price
+id: commerce_product_variation.ce.commerce_price
+field_name: commerce_price
+entity_type: commerce_product_variation
+bundle: ce
+label: Price
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_currencies: {  }
+field_type: commerce_price

@@ -1,0 +1,19 @@
+uuid: e3aac76c-3430-4ba3-b9f8-328df5a29342
+langcode: und
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - link
+id: commerce_product_variation.field_register_link
+field_name: field_register_link
+entity_type: commerce_product_variation
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

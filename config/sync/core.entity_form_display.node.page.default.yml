@@ -4,8 +4,15 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_content_section
+    - field.field.node.page.field_header_image
+    - field.field.node.page.field_metatag
+    - image.style.thumbnail
     - node.type.page
   module:
+    - image
+    - metatag
+    - paragraphs
     - path
     - text
 _core:
@@ -16,21 +23,48 @@ bundle: page
 mode: default
 content:
   body:
+    weight: 1
     type: text_textarea_with_summary
-    weight: 31
-    region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
+    region: content
   created:
     type: datetime_timestamp
     weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_content_section:
+    weight: 6
+    type: entity_reference_paragraphs
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: select
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_header_image:
+    weight: 2
+    type: image_image
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    region: content
+  field_metatag:
+    weight: 121
+    settings:
+      sidebar: true
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
   path:
     type: path
     weight: 30

@@ -1,0 +1,21 @@
+uuid: 6d88e7ff-00f7-4c7e-a954-1810e3efbe1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_speakers
+    - node.type.special_events_page
+  module:
+    - text
+id: node.special_events_page.field_speakers
+field_name: field_speakers
+entity_type: node
+bundle: special_events_page
+label: Speakers
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

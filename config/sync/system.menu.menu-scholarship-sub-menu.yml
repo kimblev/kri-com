@@ -1,0 +1,8 @@
+uuid: 70e1ca62-4925-4839-8d1c-45144b7b50ab
+langcode: en
+status: true
+dependencies: {  }
+id: menu-scholarship-sub-menu
+label: 'Scholarship Sub Menu'
+description: ''
+locked: false

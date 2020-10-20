@@ -1,0 +1,32 @@
+uuid: 6095d7f6-9346-43e0-97df-778b364428e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.product_display.body
+    - field.field.node.product_display.field_metatag
+    - field.field.node.product_display.field_product
+    - node.type.product_display
+  module:
+    - text
+    - user
+id: node.product_display.default
+targetEntityType: node
+bundle: product_display
+mode: default
+content:
+  body:
+    label: hidden
+    weight: 0
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_metatag: true
+  field_product: true

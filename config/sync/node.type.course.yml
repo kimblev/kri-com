@@ -1,0 +1,25 @@
+uuid: ff0699a6-0921-458a-9755-fe24807796b2
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - menu-about-sub-menu
+      - menu-brokers-sub-menu
+      - menu-designation-sub-menu
+      - menu-events-sub-menu
+      - menu-gri-sub-menu-
+      - main-menu
+      - menu-post-licensing-sub-menu-
+      - menu-scholarship-sub-menu
+    parent: 'main-menu:0:'
+name: Course
+type: course
+description: 'Adds a course to the site'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

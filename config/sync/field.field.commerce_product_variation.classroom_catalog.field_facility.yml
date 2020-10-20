@@ -1,0 +1,19 @@
+uuid: ba5b24b2-e436-43f4-990a-3b770fa0be93
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.classroom_catalog
+    - field.storage.commerce_product_variation.field_facility
+id: commerce_product_variation.classroom_catalog.field_facility
+field_name: field_facility
+entity_type: commerce_product_variation
+bundle: classroom_catalog
+label: Facility
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

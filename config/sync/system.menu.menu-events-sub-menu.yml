@@ -1,0 +1,8 @@
+uuid: 53e64576-c6d7-4f46-a10b-96ed6a730e74
+langcode: en
+status: true
+dependencies: {  }
+id: menu-events-sub-menu
+label: 'Events Sub Menu'
+description: ''
+locked: false

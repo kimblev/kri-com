@@ -1,0 +1,21 @@
+uuid: bc4cd158-dca0-4ff6-abd5-a17431e1d5b0
+langcode: und
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product_variation.field_p_ele_hours
+field_name: field_p_ele_hours
+entity_type: commerce_product_variation
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

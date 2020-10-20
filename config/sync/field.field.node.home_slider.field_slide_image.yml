@@ -1,0 +1,38 @@
+uuid: e3020698-d321-4c01-ac84-b4f603446dfd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slide_image
+    - node.type.home_slider
+  module:
+    - image
+id: node.home_slider.field_slide_image
+field_name: field_slide_image
+entity_type: node
+bundle: home_slider
+label: 'Slide Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: home-slide
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  title_field: true
+  default_image:
+    alt: ''
+    title: ''
+    width: null
+    height: null
+    uuid: ''
+  alt_field_required: true
+  title_field_required: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

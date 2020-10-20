@@ -1,0 +1,21 @@
+uuid: 70c2d764-0861-4422-8d37-f4e886191c00
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.broker_education
+    - field.storage.commerce_product_variation.field_product_summary
+  module:
+    - text
+id: commerce_product_variation.broker_education.field_product_summary
+field_name: field_product_summary
+entity_type: commerce_product_variation
+bundle: broker_education
+label: 'Product Summary'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

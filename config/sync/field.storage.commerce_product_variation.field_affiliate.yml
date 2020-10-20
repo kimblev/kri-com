@@ -1,0 +1,20 @@
+uuid: ba67e48c-9c2d-4320-be10-2217fd9c6ca9
+langcode: und
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - node
+id: commerce_product_variation.field_affiliate
+field_name: field_affiliate
+entity_type: commerce_product_variation
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

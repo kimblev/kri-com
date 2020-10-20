@@ -1,0 +1,8 @@
+uuid: c488e8b0-1a85-4f52-b319-672bf8be39cb
+langcode: en
+status: true
+dependencies: {  }
+id: menu-login-menu
+label: 'Login Menu'
+description: 'Login Menu with links. Only to be shown when user is anonymous'
+locked: false

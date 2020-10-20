@@ -1,0 +1,56 @@
+uuid: a160d873-5284-4599-8bca-70bf561fcb1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.home_blocks.field_bg_image
+    - field.field.node.home_blocks.field_home_block_link
+    - field.field.node.home_blocks.field_icon
+    - field.field.node.home_blocks.field_metatag
+    - node.type.home_blocks
+  module:
+    - image
+    - link
+    - user
+id: node.home_blocks.default
+targetEntityType: node
+bundle: home_blocks
+mode: default
+content:
+  field_bg_image:
+    label: above
+    weight: 1
+    type: image
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+  field_home_block_link:
+    label: above
+    weight: 2
+    type: link
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    region: content
+  field_icon:
+    label: above
+    weight: 0
+    type: image
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_metatag: true

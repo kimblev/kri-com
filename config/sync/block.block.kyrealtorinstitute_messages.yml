@@ -1,0 +1,22 @@
+uuid: 62550dcd-8cb5-4f7d-8a41-20ff7c260c3f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kyrealtorinstitute
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: kyrealtorinstitute_messages
+theme: kyrealtorinstitute
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

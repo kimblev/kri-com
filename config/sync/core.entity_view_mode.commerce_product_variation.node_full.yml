@@ -1,0 +1,10 @@
+uuid: 1546e140-26fa-470e-b451-75abda762711
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product_variation.node_full
+label: node_full
+targetEntityType: commerce_product_variation
+cache: true

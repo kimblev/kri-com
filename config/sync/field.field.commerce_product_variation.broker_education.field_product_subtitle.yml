@@ -1,0 +1,21 @@
+uuid: 25252fb3-8d24-4ab0-863f-caf31aa196bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.broker_education
+    - field.storage.commerce_product_variation.field_product_subtitle
+  module:
+    - text
+id: commerce_product_variation.broker_education.field_product_subtitle
+field_name: field_product_subtitle
+entity_type: commerce_product_variation
+bundle: broker_education
+label: 'Product Subtitle'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,21 @@
+uuid: c3082c67-bfc6-457b-80b9-b0bdb08436fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.post_licensing
+    - field.storage.commerce_product_variation.field_product_description
+  module:
+    - text
+id: commerce_product_variation.post_licensing.field_product_description
+field_name: field_product_description
+entity_type: commerce_product_variation
+bundle: post_licensing
+label: 'Product Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

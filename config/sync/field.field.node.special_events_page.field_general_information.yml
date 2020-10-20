@@ -1,0 +1,21 @@
+uuid: c0ef2b6a-d659-412e-8cd4-7d774bdbf1cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_general_information
+    - node.type.special_events_page
+  module:
+    - text
+id: node.special_events_page.field_general_information
+field_name: field_general_information
+entity_type: node
+bundle: special_events_page
+label: 'General Information'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,25 @@
+uuid: 3d14ea67-2647-4c70-8f47-a8ab7a9cb413
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kyrealtorinstitute
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: kyrealtorinstitute_branding
+theme: kyrealtorinstitute
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

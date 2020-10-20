@@ -1,0 +1,10 @@
+uuid: 9e6ad11e-0d68-4266-a196-3ca9ee3dfa6b
+langcode: en
+status: true
+dependencies: {  }
+id: ce
+label: 'Continuing Education'
+orderItemType: product
+generateTitle: false
+traits: {  }
+locked: false

@@ -1,0 +1,19 @@
+uuid: 71ecd2dd-576d-419f-9de4-53d84b36c17a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_instructor
+    - node.type.events2
+id: node.events2.field_event_instructor
+field_name: field_event_instructor
+entity_type: node
+bundle: events2
+label: 'Event Instructor'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

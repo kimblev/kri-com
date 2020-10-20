@@ -1,0 +1,21 @@
+uuid: a8439d34-6a7d-4423-9013-90c5b2a22823
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_review
+    - node.type.reviews
+  module:
+    - datetime
+id: node.reviews.field_date_review
+field_name: field_date_review
+entity_type: node
+bundle: reviews
+label: Date
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

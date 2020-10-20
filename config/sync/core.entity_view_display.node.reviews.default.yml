@@ -1,0 +1,41 @@
+uuid: 067de8d0-60a1-482e-a9be-8fd87ed4716d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.reviews.body
+    - field.field.node.reviews.field_date_review
+    - field.field.node.reviews.field_metatag
+    - node.type.reviews
+  module:
+    - datetime
+    - text
+    - user
+id: node.reviews.default
+targetEntityType: node
+bundle: reviews
+mode: default
+content:
+  body:
+    label: hidden
+    weight: 0
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_date_review:
+    label: above
+    weight: 2
+    type: datetime_default
+    settings:
+      format_type: long
+      timezone_override: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_metatag: true

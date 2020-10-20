@@ -1,0 +1,21 @@
+uuid: 9080687a-7b81-456f-ac8a-676f4fd823cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_schedule
+    - node.type.special_events_page
+  module:
+    - text
+id: node.special_events_page.field_schedule
+field_name: field_schedule
+entity_type: node
+bundle: special_events_page
+label: Schedule
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

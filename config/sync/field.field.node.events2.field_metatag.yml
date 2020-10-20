@@ -1,0 +1,21 @@
+uuid: 85404daf-ea9e-4b4d-8a66-16cd3cc751c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatag
+    - node.type.events2
+  module:
+    - metatag
+id: node.events2.field_metatag
+field_name: field_metatag
+entity_type: node
+bundle: events2
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

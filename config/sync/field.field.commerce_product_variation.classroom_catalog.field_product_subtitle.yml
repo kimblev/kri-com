@@ -1,0 +1,21 @@
+uuid: 4f2bbd67-b863-4985-b265-3f533ae2507c
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.classroom_catalog
+    - field.storage.commerce_product_variation.field_product_subtitle
+  module:
+    - text
+id: commerce_product_variation.classroom_catalog.field_product_subtitle
+field_name: field_product_subtitle
+entity_type: commerce_product_variation
+bundle: classroom_catalog
+label: 'Product Subtitle'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

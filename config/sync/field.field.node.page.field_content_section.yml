@@ -1,0 +1,32 @@
+uuid: 03305228-03dc-47f9-a419-b787c4a79cd2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_section
+    - node.type.page
+  module:
+    - entity_reference_revisions
+id: node.page.field_content_section
+field_name: field_content_section
+entity_type: node
+bundle: page
+label: 'Content Section'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    negate: 0
+    target_bundles: null
+    target_bundles_drag_drop:
+      course_event:
+        enabled: false
+        weight: 2
+      simple_content_block:
+        enabled: false
+        weight: 3
+  handler: 'default:paragraph'
+field_type: entity_reference_revisions

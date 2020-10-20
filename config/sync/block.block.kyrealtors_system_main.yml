@@ -1,0 +1,22 @@
+uuid: 700c760e-e4f5-43fc-ba8b-2b568e4eb570
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kyrealtorinstitute
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: kyrealtors_system_main
+theme: kyrealtorinstitute
+region: content
+weight: -28
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: ''
+  provider: system
+  label_display: '0'
+visibility: {  }

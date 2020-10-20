@@ -1,0 +1,19 @@
+uuid: b899a243-5577-4698-b920-7da937a06571
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_general_information
+field_name: field_general_information
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

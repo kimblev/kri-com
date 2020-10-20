@@ -1,0 +1,84 @@
+uuid: 50b3e596-76d8-40e4-9796-cb921f0fa9a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.product_display_broker_education
+    - field.field.commerce_product.product_display_broker_education.body
+  module:
+    - commerce
+    - path
+    - text
+id: commerce_product.product_display_broker_education.default
+targetEntityType: commerce_product
+bundle: product_display_broker_education
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 3
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 7
+    region: content
+    third_party_settings: {  }
+  stores:
+    type: commerce_entity_select
+    weight: 0
+    region: content
+    settings:
+      hide_single_entity: true
+      autocomplete_threshold: 7
+      autocomplete_size: 60
+      autocomplete_placeholder: ''
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 4
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  variations:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: BE-0000
+    third_party_settings: {  }
+hidden: {  }

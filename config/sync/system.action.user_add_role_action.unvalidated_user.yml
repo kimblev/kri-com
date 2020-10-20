@@ -1,0 +1,14 @@
+uuid: 4e0f9a50-f9d3-47d1-8824-3c92d4a290c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.unvalidated_user
+  module:
+    - user
+id: user_add_role_action.unvalidated_user
+label: 'Add the unvalidated user role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: unvalidated_user

@@ -1,0 +1,48 @@
+uuid: 35d044a3-381a-46b6-a6d8-962d0f84e2a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.pre_licensing
+    - core.entity_view_mode.commerce_product_variation.node_teaser
+    - field.field.commerce_product_variation.pre_licensing.commerce_price
+    - field.field.commerce_product_variation.pre_licensing.field_pre_licensing_disclaimer
+  module:
+    - commerce_price
+id: commerce_product_variation.pre_licensing.node_teaser
+targetEntityType: commerce_product_variation
+bundle: pre_licensing
+mode: node_teaser
+content:
+  commerce_price:
+    label: hidden
+    weight: 0
+    type: commerce_price_default
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+    region: content
+  list_price:
+    label: above
+    type: commerce_price_default
+    weight: -1
+    region: content
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+  price:
+    label: above
+    type: commerce_price_default
+    weight: 0
+    region: content
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+hidden:
+  field_pre_licensing_disclaimer: true
+  product_id: true
+  sku: true
+  title: true

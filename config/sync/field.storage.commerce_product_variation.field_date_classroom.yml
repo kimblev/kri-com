@@ -1,0 +1,20 @@
+uuid: 66b6db6f-f2ef-49c8-a433-aa6206b7dcb8
+langcode: und
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - datetime
+id: commerce_product_variation.field_date_classroom
+field_name: field_date_classroom
+entity_type: commerce_product_variation
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

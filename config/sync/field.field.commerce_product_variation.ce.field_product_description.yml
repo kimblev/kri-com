@@ -1,0 +1,21 @@
+uuid: 14c51a4b-8ca3-43bc-8c40-a1dff087edc3
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.ce
+    - field.storage.commerce_product_variation.field_product_description
+  module:
+    - text
+id: commerce_product_variation.ce.field_product_description
+field_name: field_product_description
+entity_type: commerce_product_variation
+bundle: ce
+label: 'Product Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,30 @@
+uuid: a34aac20-7d04-43bb-a894-33903ec1a4d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.post_licensing
+    - field.storage.commerce_product_variation.field_affiliate
+    - node.type.affiliate_landing
+id: commerce_product_variation.post_licensing.field_affiliate
+field_name: field_affiliate
+entity_type: commerce_product_variation
+bundle: post_licensing
+label: Affiliate
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      affiliate_landing: affiliate_landing
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

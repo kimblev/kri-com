@@ -1,0 +1,10 @@
+uuid: f641e4d8-9176-4139-b3ac-f1d8407bfd8e
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product_variation.commerce_product_commerce_discount_offer_token
+label: commerce_product_commerce_discount_offer_token
+targetEntityType: commerce_product_variation
+cache: true

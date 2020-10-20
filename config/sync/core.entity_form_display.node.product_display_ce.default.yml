@@ -1,0 +1,93 @@
+uuid: 0274b1c3-5914-41ac-8654-e65170e9367d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.product_display_ce.body
+    - field.field.node.product_display_ce.field_ce_product
+    - field.field.node.product_display_ce.field_metatag
+    - node.type.product_display_ce
+  module:
+    - metatag
+    - path
+    - text
+id: node.product_display_ce.default
+targetEntityType: node
+bundle: product_display_ce
+mode: default
+content:
+  body:
+    weight: 41
+    type: text_textarea_with_summary
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_metatag:
+    weight: 121
+    settings:
+      sidebar: true
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 120
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_ce_product: true

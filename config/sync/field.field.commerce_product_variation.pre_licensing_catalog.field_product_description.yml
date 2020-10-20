@@ -1,0 +1,21 @@
+uuid: 6330384b-97d4-4ea6-81d3-08d6fc753064
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.pre_licensing_catalog
+    - field.storage.commerce_product_variation.field_product_description
+  module:
+    - text
+id: commerce_product_variation.pre_licensing_catalog.field_product_description
+field_name: field_product_description
+entity_type: commerce_product_variation
+bundle: pre_licensing_catalog
+label: 'Product Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

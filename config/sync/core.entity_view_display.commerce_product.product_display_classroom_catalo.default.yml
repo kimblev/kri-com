@@ -1,0 +1,42 @@
+uuid: 62cfc404-ca7d-4bd9-a9fb-579e841d6d95
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.product_display_classroom_catalo
+    - field.field.commerce_product.product_display_classroom_catalo.body
+  module:
+    - commerce_product
+    - text
+id: commerce_product.product_display_classroom_catalo.default
+targetEntityType: commerce_product
+bundle: product_display_classroom_catalo
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  variations:
+    type: commerce_add_to_cart
+    weight: 10
+    region: content
+    label: above
+    settings:
+      combine: true
+    third_party_settings: {  }
+hidden:
+  created: true
+  stores: true
+  uid: true

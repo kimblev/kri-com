@@ -1,0 +1,22 @@
+uuid: afdc3200-d825-402d-b2b9-94a436fb95b2
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - kyrealtorinstitute
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: kyrealtorinstitute_help
+theme: kyrealtorinstitute
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,21 @@
+uuid: 13ee871b-f7f9-4056-8375-7fd6a61ac135
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.post_licensing
+    - field.storage.commerce_product_variation.field_ple
+  module:
+    - text
+id: commerce_product_variation.post_licensing.field_ple
+field_name: field_ple
+entity_type: commerce_product_variation
+bundle: post_licensing
+label: PLE
+description: 'This text will appear on affiliate pages (courses table)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

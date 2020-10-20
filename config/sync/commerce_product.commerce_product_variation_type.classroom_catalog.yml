@@ -1,0 +1,10 @@
+uuid: ce49baab-c1c3-4e81-ad88-24466ed02141
+langcode: en
+status: true
+dependencies: {  }
+id: classroom_catalog
+label: 'Classroom Catalog'
+orderItemType: default
+generateTitle: false
+traits: {  }
+locked: false

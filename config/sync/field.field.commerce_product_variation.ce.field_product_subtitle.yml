@@ -1,0 +1,21 @@
+uuid: 03dfef57-fca0-4107-aa3e-8e3b8ea598e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.ce
+    - field.storage.commerce_product_variation.field_product_subtitle
+  module:
+    - text
+id: commerce_product_variation.ce.field_product_subtitle
+field_name: field_product_subtitle
+entity_type: commerce_product_variation
+bundle: ce
+label: 'Product Subtitle'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

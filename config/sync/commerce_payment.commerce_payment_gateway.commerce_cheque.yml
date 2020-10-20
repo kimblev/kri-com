@@ -1,0 +1,19 @@
+uuid: 0df8dc2a-ead1-49aa-83e7-1ac951d9c408
+langcode: en
+status: true
+dependencies: {  }
+id: commerce_cheque
+label: commerce_cheque
+weight: null
+plugin: manual
+configuration:
+  instructions:
+    value: ''
+    format: plain_text
+  display_label: Manual
+  mode: n/a
+  payment_method_types:
+    - credit_card
+  collect_billing_information: true
+conditions: {  }
+conditionOperator: AND
