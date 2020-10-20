@@ -1,0 +1,67 @@
+uuid: 7d66a31a-f90f-4f47-adfc-1cbb966dc725
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_view_modes
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+migration_group: migrate_drupal_7
+label: 'View modes'
+source:
+  plugin: commerce1_view_mode
+process:
+  mode:
+    -
+      plugin: static_map
+      source: view_mode
+      bypass: true
+      map:
+        default: full
+  label:
+    -
+      plugin: static_map
+      source: view_mode
+      bypass: true
+      map:
+        search_index: 'Search index'
+        search_result: 'Search result'
+        rss: RSS
+        print: Print
+        teaser: Teaser
+        full: Full
+        default: Full
+  targetEntityType:
+    0:
+      plugin: static_map
+      source: entity_type
+      bypass: 'true'
+      map:
+        product_display: commerce_product
+        commerce_product: commerce_product_variation
+        commerce_customer_profile: skip
+        inline_conditions: skip
+        commerce_discount: skip
+        commerce_discount_offer: skip
+        commerce_line_item: skip
+        commerce_order: skip
+        message: skip
+        message_type: skip
+    1:
+      plugin: skip_on_value
+      value: skip
+      method: row
+    paragraphs:
+      plugin: static_map
+      map:
+        field_collection_item: paragraph
+        paragraphs_item: paragraph
+      bypass: true
+destination:
+  plugin: 'entity:entity_view_mode'
+migration_dependencies:
+  required: {  }
+  optional: {  }

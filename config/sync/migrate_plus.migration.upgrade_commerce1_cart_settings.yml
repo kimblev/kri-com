@@ -1,0 +1,42 @@
+uuid: a8775cd3-9a41-4f20-b24c-804e81f91d54
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_commerce1_cart_settings
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Commerce
+  - Configuration
+migration_group: migrate_drupal_7
+label: 'Cart settings'
+source:
+  plugin: variable
+  variables:
+    - commerce_cart_refresh_force
+    - commerce_cart_refresh_frequency
+    - commerce_cart_refresh_mode
+  source_module: commerce_order
+process:
+  refresh_frequency:
+    -
+      plugin: default_value
+      source: commerce_cart_refresh_frequency
+      default_value: 15
+  refresh_mode:
+    -
+      plugin: commerce1_refresh_mode
+      source:
+        - commerce_cart_refressh_force
+        - commerce_cart_refresh_mode
+    -
+      plugin: skip_on_empty
+      method: process
+destination:
+  plugin: config
+  config_name: commerce_order.commerce_order_type.default
+migration_dependencies:
+  required: {  }
+  optional: {  }

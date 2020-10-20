@@ -1,0 +1,50 @@
+uuid: 1041b376-8347-48fe-9462-3499d6440d49
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_commerce1_product_attribute
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Commerce
+  - Configuration
+migration_group: migrate_drupal_7
+label: 'Commerce attribute'
+source:
+  plugin: commerce1_attribute
+process:
+  attribute:
+    -
+      plugin: skip_on_empty
+      method: row
+      source: attribute
+  id:
+    -
+      plugin: make_unique_entity_field
+      entity_type: commerce_product_attribute
+      field: id
+      source: machine_name
+      length: 29
+  label:
+    -
+      plugin: get
+      source: name
+  elementType:
+    -
+      plugin: static_map
+      bypass: true
+      source: display
+      map:
+        - text
+        - select
+        - radios
+        - checkbox
+destination:
+  plugin: 'entity:commerce_product_attribute'
+  destination_module: commerce_product
+migration_dependencies:
+  required:
+    - upgrade_d7_field
+  optional: {  }
