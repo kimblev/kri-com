@@ -1,0 +1,196 @@
+/**
+ * If using a CSS pre-processor, tell it to overwrite this file. If not, place
+ * your custom CSS modifications here.
+ */
+
+/* GLobal */
+body {margin-top: 0; font-family: proxima-nova, sans-serif; font-size: 18px;}
+a, a:hover, a:focus {text-decoration: none!important;}
+.no-padding {padding: 0;}
+img.align-right {padding: 10px 0 10px 10px;}
+ul li {padding-bottom: 20px;}
+figure.image {margin: 10px;}
+img {max-width: 100%;}
+ul.toolbar-menu li {padding-bottom: 0;}
+
+/* Display None */
+.navbar-brand, .flex-direction-nav {display: none;}
+
+/* Blue */
+.navbar .nav>li>a, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus, .dropdown-menu > li > a, .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus,
+h1, h2, h3, h4, h5, h6 {color: #22428b;}
+input[type="submit"], .region-sidebar-second .block {background-color: #22428b;}
+
+/* Brown */
+footer {background: #76592e;}
+.dropdown-menu > li.active > a, .dropdown-menu > li.active > a:hover, .dropdown-menu > li.active > a:focus,
+#block-kyrealtorinstitute-main-menu > ul > li.expanded.dropdown.active.active-trail > a,
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav li.active a,
+.menu--top-menu li.last a,
+.main-container a
+{color: #76592e;}
+
+/* White */
+footer *, footer a, input[type="submit"], .region-sidebar-second .block, .region-sidebar-second .block a, .caption h2, a.button-link, a.button-link:hover {color: #fff;}
+
+/* Off white */
+aside .block-webform {background-color: #f7f7f7;}
+
+/* DARK Gray */
+.top-nav a {color: #333333;}
+
+/* Gold */
+footer ul.footer-address a, footer ul.footer-address a:hover {color: #d4ac5e!important;}
+
+/* Fonts */
+h1, h2, h3, h4, h5, h6 {font-family: proxima-nova, sans-serif; margin: 16px 0; line-height: 1.4; font-weight: 700; text-transform: uppercase;}
+
+h1, .h1 {font-size: 30px;}
+h2, .h2 {font-size: 24px;}
+h3, .h3 {font-size: 18px;}
+aside .block h2 {margin-top: 0; padding-top: 0;}
+
+h5 {font-size: 1.1em;}
+/*h5 strong {color: #fff; background: #22428b; text-align: left; padding: .5em; display: block;}*/
+article h5 {margin-top: 0px;}
+
+
+
+/* Buttons */
+.button-link, aside .btn-primary {
+    background-color: #22428b;
+    border: 1px solid #1d3877;
+    border-radius: 3px;
+    color: #fff;
+    text-decoration: none;
+    padding: .75em 1.5em .75em;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,.2);
+}
+
+/* Header */
+.navbar-default {background-color: transparent;}
+
+.navbar-nav {padding-top: 35px;}
+
+.navbar {border-radius: 0; border: 0px solid transparent; margin-bottom: 0;}
+
+.top-nav {background: #f7f7f7; padding: 0; text-transform: uppercase; font-weight: 700; font-size: 12px; text-align: right;}
+.menu--top-menu li {display: inline-block; padding-bottom: 0;}
+.menu--top-menu li a:hover {background-color: transparent;}
+.menu--top-menu > li > a {padding: 10px 10px;}
+.menu--main li a, .menu--main li a:visited, .menu--main li a {text-decoration: none; cursor: pointer; text-transform: uppercase; font-weight: 700; font-size: 18px;}
+
+.dropdown-menu > li > a {font-size: 15px; font-weight: 700;}
+
+.navbar .nav li.dropdown.open>.dropdown-toggle, .navbar .nav li.dropdown.active>.dropdown-toggle, .navbar .nav li.dropdown.open.active>.dropdown-toggle, .dropdown-menu>li>a, .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus, .dropdown-submenu:hover>a, .dropdown-submenu:focus>a, .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {background-color: transparent!important; background-image: none!important;}
+
+.navbar .nav>.active>a, .navbar .nav>.active>a:hover, .navbar .nav>.active>a:focus {box-shadow: none!important;}
+
+ul.menu--main li.expanded {padding-bottom: 0;}
+.dropdown-menu li.last {padding-bottom: 0; border-bottom: none;}
+.dropdown-menu li {border-bottom: 1px solid #d4ac5e; margin-bottom: 5px; padding-bottom: 5px;}
+
+
+/* Slideshow */
+.flexslider {margin: 0 0 0px; border: 0px solid #fff;}
+#flexslider-1 ul.slides {margin: 0;}
+#flexslider-1 ul.slides li {list-style-type: none;}
+#flexslider-1 ul.slides li .caption {position: absolute; width: 70%; background: none; font-size: 1.2em; padding: 0; height: 100%; text-align: center; bottom: 0; top: 0; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-flow: column; flex-flow: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-transition: all .3s linear; transition: all .3s linear; text-decoration: none; margin: 0 auto; left: 0; right: 0; color: #fff;}
+
+#flexslider-1 .btn.light a {color: #fff;}
+
+#flexslider-1 .btn {background-color: transparent!important; background-image: none!important; text-shadow: none!important; border: none; box-shadow: none;}
+
+.flex-control-nav {bottom: 0; z-index: 9;}
+.flex-control-paging li a.flex-active {background: rgba(255, 255, 255, 0.9);}
+
+.btn a, a.btn {
+    display: inline-block;
+    border: 5px solid;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 15px 40px;
+    font-size: 1em;
+    margin-top: 15px;
+}
+
+
+
+
+/* Page Bottom */
+#block-homepage3blocks {margin-bottom: 2em;}
+#block-homepage3blocks img {width: 100%!important;}
+
+.page-bottom {background: #f7f7f7; padding: 2em 0 2em 0;}
+body.path-frontpage .page-bottom {padding-top: 0em;}
+
+.mc-field-group {
+    padding: 0em 1em 1em 0;
+    width: 47%;
+    margin: 0;
+    display: inline-block;
+}
+
+.mc-field-group input {
+    border: 1px solid #525252;
+    border-radius: 0;
+    padding: 1.5em 1em;
+}
+
+.mc-field-group input[type="submit"] {
+    text-transform: uppercase;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 1.5em 3em;
+    margin-top: -10px;
+    width: 100%;
+}
+
+.mc-field-group input[type="text"], .mc-field-group input[type="email"], .mc-field-group input[type="name"], .mc-field-group input[type="password"], .mc-field-group input[type="file"] {
+    box-sizing: border-box;
+    padding: 1.5em 1em;
+    font-size: 100%;
+    font-family: "proxima-nova",sans-serif;
+    border: 1px solid #D3D3D3;
+    border-radius: 2px;
+    width: 100%;
+}
+
+/* Front Page */
+body.path-frontpage h1.page-header, body.path-frontpage ul.tabs--primary {display: none;}
+body.path-frontpage .main-container {margin-bottom: 0;}
+
+/* Page */
+.main-container {margin-bottom: 50px;}
+.page-header {padding-bottom: 0; margin-top: -60px; margin-bottom: 50px; border-bottom: none; text-align: center; color: #fff;  z-index: 99; position: relative;}
+.page-header span {background-color: #22428b; padding: 10px 10px 0px 10px}
+.banner img {border-bottom: 30px solid #22428b;}
+
+/* Sidebar */
+aside .block {text-align: center; padding: 15px; margin-bottom: 15px;}
+aside i {margin: 0 5px;}
+aside nav h2 {margin-bottom: 0;}
+aside .navbar-nav {padding-top: 0; width: 100%; float: none; margin-bottom: 20px;}
+aside .navbar-nav > li > a {font-size: .85em; color: #333333; text-decoration: none; display: block; padding: 18px 20px 18px 15px;}
+aside .navbar-nav > li {text-transform: uppercase; padding: 0; list-style: none; background: #f7f7f7;  width: 100%; position: relative; margin: 0; border-top: 1px solid #cdcdcd;}
+aside .navbar-nav > li.first {border-top: none;}
+aside .navbar-nav > li.active {background: #f7f7f7; border-left: 10px solid #22428b;}
+
+/* Accordion */
+.ckeditor-accordion-container > dl dt > a {background-color: #22428b; color: #fff;}
+dd.active p {padding: 15px 0;}
+
+/* Footer */
+.footer {text-align: center; padding: 3em 0; border-top: 0px solid #E5E5E5; margin-top: 0;}
+footer a {margin: 10px;}
+footer #block-footersocial, footer ul.footer-address {margin-bottom: 20px;}
+footer ul.footer-address li {list-style-type: none; display: inline-block; margin: 0 15px; text-align: center;}
+footer .footer-copy {font-weight: 300; font-size: 0.8em;}
+
+/* Tables */
+table {margin-bottom: 25px; width: 100%; border-collapse: collapse; border-spacing: 0;}  
+table tbody {font-size: .9em; border-top: 1px solid #ccc;}
+table tr {padding: 0;}
+table td {padding: 0.5em 2em; margin: 0; border: 1px solid #ccc;}
